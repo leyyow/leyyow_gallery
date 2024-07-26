@@ -1,7 +1,30 @@
-<script setup>
+<script >
 import blueShoe from "@/assets/blueShoe.svg";
 import blackShoe from "@/assets/blackShoe.svg";
 import brownShoe from "@/assets/brownShoe.svg";
+export default {
+    data() {
+        return {
+            blackShoe,
+            blueShoe,
+            brownShoe,
+            selectedItem: null,
+            sizes: [
+                { text: 'Small', value: 1 },
+                { text: 'Medium', value: 2 },
+                { text: 'Large', value: 3 },
+                { text: 'XLarge', value: 4 },
+            ],
+            selectedColor:null,
+               colors: [
+                { text: 'Red', value: 1 },
+                { text: 'Blue', value: 2 },
+                { text: 'Yellow', value: 3 },
+                { text: 'Black', value: 4 },
+            ]
+        };
+    }
+}
 </script>
 <template>
   <div class="container">
@@ -10,7 +33,7 @@ import brownShoe from "@/assets/brownShoe.svg";
     </div>
     <div class="header_container">
       <h2 style="width: 50%">Unisex (for the men, women)</h2>
-      <p>N5000</p>
+      <p>N5,000</p>
     </div>
 
     <div class="select_container">
@@ -18,24 +41,23 @@ import brownShoe from "@/assets/brownShoe.svg";
         <h4>Colors</h4>
         <v-select
           label="Color"
-          segmented
-          overflow
-          editable
+            v-model="selectedItem"
           target="#target"
+          :items="colors"
         ></v-select>
       </div>
       <div>
-        <h4>Colors</h4>
+        <h4>Sizes</h4>
         <v-select
           label="Size"
-          :items="items"
-          v-model="value"
+          :items="sizes"
+          v-model="selectedColor"
           autocomplete
         ></v-select>
       </div>
     </div>
     <div class="second_container">
-      <v-btn size="x-large"> Add to cart </v-btn>
+      <v-btn size="x-large" class="btn"> Add to cart </v-btn>
       <div>
         <h3>Similar products</h3>
         <v-row>
@@ -63,8 +85,12 @@ import brownShoe from "@/assets/brownShoe.svg";
 .select_container > div {
   width: 45%;
 }
+h2{
+    font-weight: 400;
+}
 p {
   font-size: 1.5rem;
+  font-weight: 700;
 }
 .hero_img {
   background-color: #f9eeeb;
@@ -91,6 +117,9 @@ p {
 .second_container >div> h3{
     margin: 16px 0;
 }
+h4{
+    margin: 10px 0;
+}
 .blue,
 .black,
 .brown {
@@ -106,5 +135,9 @@ p {
 }
 .brown{
     background-color: #EBE7B8;
+}
+.btn{
+    background:linear-gradient(to right, #5F40EE, #943FED);
+    color:white;
 }
 </style>

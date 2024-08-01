@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'Purple Modal',
+    name: 'PurpleModal',
     data(){
     return {};
   },
@@ -36,4 +36,4 @@ button{
     background: white;
     color:#814cef;
 }
-</style>
+</style>  

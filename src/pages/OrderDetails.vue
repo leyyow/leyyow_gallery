@@ -1,10 +1,39 @@
-<script></script>
+<script >
+import blueShoe from "@/assets/blueShoe.svg";
+import blackShoe from "@/assets/blackShoe.svg";
+import brownShoe from "@/assets/brownShoe.svg";
+export default {
+    data() {
+        return {
+            blackShoe,
+            blueShoe,
+            brownShoe,
+            selectedItem: null,
+            sizes: [
+                { text: 'Small', value: 1 },
+                { text: 'Medium', value: 2 },
+                { text: 'Large', value: 3 },
+                { text: 'XLarge', value: 4 },
+            ],
+            selectedColor:null,
+               colors: [
+                { text: 'Red', value: 1 },
+                { text: 'Blue', value: 2 },
+                { text: 'Yellow', value: 3 },
+                { text: 'Black', value: 4 },
+            ]
+        };
+    }
+}
+</script>
 <template>
-  <div>
-    image for the deletable-chips
+  <div class="container">
+    <div class="hero_img">
+      <v-img :src="blueShoe"></v-img>
+    </div>
     <div class="header_container">
-      <h2>Unisex for women</h2>
-      <p>N5000</p>
+      <h2 style="width: 50%">Unisex (for the men, women)</h2>
+      <p>N5,000</p>
     </div>
 
     <div class="select_container">
@@ -12,33 +41,103 @@
         <h4>Colors</h4>
         <v-select
           label="Color"
-          segmented
-          overflow
-          editable
+            v-model="selectedItem"
           target="#target"
+          :items="colors"
         ></v-select>
       </div>
       <div>
-        <h4>Colors</h4>
+        <h4>Sizes</h4>
         <v-select
           label="Size"
-          :items="items"
-          v-model="value"
+          :items="sizes"
+          v-model="selectedColor"
           autocomplete
         ></v-select>
       </div>
     </div>
+    <div class="second_container">
+      <v-btn size="x-large" class="btn"> Add to cart </v-btn>
+      <div>
+        <h3>Similar products</h3>
+        <v-row>
+          <v-col class="blue">
+            <v-img :src="blueShoe"></v-img>
+          </v-col>
+          <v-col class="black">
+            <v-img :src="blackShoe"></v-img>
+          </v-col>
+          <v-col class="brown">
+            <v-img :src="brownShoe"></v-img>
+          </v-col>
+        </v-row>
+    </div>
+    </div>
   </div>
 </template>
 <style scoped>
-.header_container, .select_container {
+.header_container,
+.select_container {
   display: flex;
   justify-content: space-between;
+  margin: 16px 0;
 }
 .select_container > div {
-    width: 45%;
+  width: 45%;
+}
+h2{
+    font-weight: 400;
 }
 p {
   font-size: 1.5rem;
+  font-weight: 700;
+}
+.hero_img {
+  background-color: #f9eeeb;
+  border-radius: 8px;
+}
+.container {
+  margin: 24px;
+}
+.second_container {
+  width: 100%;
+}
+.second_container > div{
+    display: flex;
+    flex-direction: column;
+}
+.v-row{
+    margin: 0;
+    align-items: center;
+}
+.second_container > button {
+  margin: 32px 0;
+  width: 100%;
+}
+.second_container >div> h3{
+    margin: 16px 0;
+}
+h4{
+    margin: 10px 0;
+}
+.blue,
+.black,
+.brown {
+  border-radius: 8px;
+  padding: 0;
+  margin: 3px;
+}
+.blue {
+  background: #eaf1ff;
+}
+.black {
+  background-color: #f9eeeb;
+}
+.brown{
+    background-color: #EBE7B8;
+}
+.btn{
+    background:linear-gradient(to right, #5F40EE, #943FED);
+    color:white;
 }
 </style>

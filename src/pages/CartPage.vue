@@ -1,5 +1,6 @@
 <script>
 import blueShoe from "@/assets/blueShoe.svg";
+import PurpleModal from "@/components/PurpleModal.vue";
 export default {
   data() {
     return {
@@ -9,7 +10,7 @@ export default {
 };
 </script>
 <template>
-  <v-container class="ma-5 pa-0">
+  <v-container class="pa-5 ma-0">
     <h2>Cart (2 items)</h2>
     <v-card class="d-flex justify-space-between pa-4 my-4 mb-7 rounded-xl" >
       <div class="w-33 rounded-lg blueShoe mr-3 d-flex align-center">
@@ -42,6 +43,7 @@ export default {
                   <p class="mx-2">2</p>
             <button class="rounded px-3 py-2">-</button>
           </div>
+          <PurpleModal/>
         </v-container>
       </div>
     </v-card>

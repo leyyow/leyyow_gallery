@@ -11,6 +11,7 @@
   src: url('./assets/Graphik Family/Graphik-Regular-Trial.otf'); 
 }
 #app {
+  background-color: #E5E5E5;
   font-family: 'Graphik', Helvetica, Arial, sans-serif;}
 </style>
 <script setup>

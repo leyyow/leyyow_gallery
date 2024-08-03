@@ -1,20 +1,30 @@
 <script>
 export default {
-    name:'CheckoutPage'
-}
+  name: "CheckoutPage",
+};
 </script>
 <template>
-    <v-container>
-        <h1>Thanks for being our customer</h1>
-        <p>Input your coupon code to get Get 20% OFF Limited time offer</p>
-        <div>
-            <div class="coupon rounded pa-1"><input type="text"> <button>Apply</button></div>
-        </div>
-    </v-container>
+  <v-container>
+    <h1 class="text-h5 w-75 mt-6 font-weight-bold">
+      Thanks for being our customer
+    </h1>
+    <p class="my-4">
+      Input your coupon code to get Get 20% OFF Limited time offer
+    </p>
+    <div>
+      <div class="d-flex coupon rounded pa-2 justify-space-between">
+        <input type="text" placeholder="Coupon code" /> <button class="pa-2 px-4 btn rounded-lg">Apply</button>
+      </div>
+    </div>
+    <PurpleModal :cart="false" :checkout="true" />
+  </v-container>
 </template>
 <style scoped>
-.coupon{
-    border: 1px solid grey;
-
+.coupon {
+  border: 1px solid lightgray;
+}
+.btn{
+      background: linear-gradient(to right, #6d40ee, #943fed);
+      color: white;
 }
 </style>

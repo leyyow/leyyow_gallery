@@ -96,12 +96,9 @@ export default {
   </div>
 </template>
 <style scoped>
-.v-container {
-  border: 2px solid red;
-}
+
 .first {
   z-index: 1;
-  border: 2px solid green;
 }
 .width {
   width: 90%;

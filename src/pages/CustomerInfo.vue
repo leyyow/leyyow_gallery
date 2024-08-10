@@ -29,7 +29,8 @@ export default {
 };
 </script>
 <template>
-  <v-container class="first ma-0 position-absolute d-flex flex-column">
+  <div class="d-flex home pa-4 flex-column overflow-x-hidden">
+    <div class="first ma-0 position-relative d-flex flex-column">
     <h1>Kindly input your information</h1>
     <form class="d-flex flex-column position-relative mb-10">
       <label class="text-grey-darken-2 mt-4" for="">Full name</label>
@@ -73,35 +74,32 @@ export default {
       </div>
     </form>
    
-  </v-container>
-  <div>
-    <div
-      :class="heightClass"
-      class="overflow-hidden transition-height duration-300"
-    >
-      <PurpleModal
+  </div>
+
+  </div>
+    <div class="second">
+     <PurpleModal
         :cart="true"
         :checkout="false"
         :shipping="true"
         :total="true"
         :shopping="false"
       />
-      <button
-        @click="toggleHeight"
-        class="mt-2 px-4 py-2 bg-blue-500 text-white rounded"
-      >
-        {{ buttonText }}
-      </button>
-    </div>
   </div>
 </template>
 <style scoped>
 
 .first {
-  z-index: 1;
+  z-index: 10;
+  position: relative;
+}
+.home{
+  overflow-y: auto;
+  width: 100%;
+  
 }
 .width {
-  width: 90%;
+  width: 95%;
 }
 img {
   width: 25px;

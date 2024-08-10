@@ -53,13 +53,14 @@ import blueShoe from "@/assets/blueShoe.svg";
   margin: 3px;
 }
 .img{
- width: 100px;
+ width: 119px;
+ height: 88px;
+
 }
 .card {
    background: #f2e9fa;
   border-radius: 4px;
   margin: 3px;
- 
   display: grid;
 }
 .car-img {

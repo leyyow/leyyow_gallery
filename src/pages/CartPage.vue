@@ -51,7 +51,9 @@ export default {
     </v-card>
     
   </v-container>
-      <PurpleModal :cart="true" :checkout="false"/>
+ <div class="position-fixed bottom-0 w-100 ">
+       <PurpleModal :cart="true" :checkout="false"/>
+ </div>
 </template>
 <style scoped>
 .product_name {

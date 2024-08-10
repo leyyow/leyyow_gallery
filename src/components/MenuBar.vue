@@ -47,11 +47,13 @@ export default {
 
 <style scoped>
 .menu-button {
-  position: fixed;
-  top: 20px;
+  position: relative;
+ 
   display: flex;
   justify-content: flex-end;
-  right: 20px;
+  align-items: center;
+  right: 48px;
+  padding-right: 24px;
   left: 20px;
   font-size: 24px;
   z-index: 1000;
@@ -123,5 +125,4 @@ export default {
   color: white;
   font-size: 24px;
 }
-
 </style>

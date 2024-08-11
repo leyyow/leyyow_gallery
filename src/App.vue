@@ -1,3 +1,7 @@
+<script setup>
+  
+import "@/styles/global.css";
+</script>
 <template>
   <v-app>
     <v-main>
@@ -14,6 +18,4 @@
   background-color: #E5E5E5;
   font-family: 'Graphik', Helvetica, Arial, sans-serif;}
 </style>
-<script setup>
-  //
-</script>
+

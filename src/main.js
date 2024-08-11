@@ -9,6 +9,7 @@ import { registerPlugins } from '@/plugins'
 
 // Components
 import App from './App.vue'
+import "@fortawesome/fontawesome-free/css/all.css";
 
 // Composables
 import { createApp } from 'vue'

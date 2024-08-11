@@ -4,8 +4,9 @@ export default {
 };
 </script>
 <template>
-  <v-container>
-    <h1 class="text-h5 w-75 mt-6 font-weight-bold">
+  <v-container class="pa-0">
+   <div class="pa-4">
+     <h1 class="text-h5 w-75 mt-6 font-weight-bold">
       Thanks for being our customer
     </h1>
     <p class="my-4">
@@ -16,6 +17,7 @@ export default {
         <input type="text" placeholder="Coupon code" /> <button class="pa-2 px-4 btn rounded-lg">Apply</button>
       </div>
     </div>
+   </div>
     <PurpleModal :cart="false" :checkout="true" />
   </v-container>
 </template>

@@ -44,8 +44,7 @@ export default {
 </script>
 <template>
 
-    <v-container
-      class="rounded-t-xl text-white position-fixed bottom-0  w-100 ma-0 mt-5 pa-4 overflow-y-scroll"
+    <div class=" v-content rounded-t-xl text-white position-relative bottom-0  w-100 ma-0 mt-5 pa-4 overflow-y-scroll"
     >
       <div v-if="checkout">
         <h1 class="text-h5 w-66 font-weight-medium mt-8">
@@ -99,14 +98,14 @@ export default {
           Proceed to checkout
         </button>
       </div>
-    </v-container>
+    </div>
 
 </template>
 <style scoped>
-.v-container {
+.v-content {
   background: linear-gradient(to right, #6d40ee, #943fed);
   width: 100%;
-
+z-index: 0;
 }
 .first-div {
   border-bottom: white dashed 2px;

@@ -85,7 +85,7 @@ ul {
 }
 li {
   list-style: none;
-  padding: 6px 16px;
+  padding: 6px 24px;
   text-wrap: nowrap;
 }
 li:hover {

@@ -12,20 +12,20 @@ export default {
 </script>
 <template>
   <v-container class="pa-5 ma-0">
-    <h2>Cart (2 items)</h2>
+    <h2 class="text-16">Cart (2 items)</h2>
     <v-card class="d-flex justify-space-between pa-4 my-4 mb-7 rounded-xl" >
       <div class="w-33 rounded-lg blueShoe mr-3 d-flex align-center">
         <img :src="blueShoe" alt="blueShoe" />
       </div>
       <div class="w-66">
-        <h2 class="product_name w-45 py-2">Unisex for women, for the men</h2>
-        <p class="product_price">N5,000</p>
+        <h2 class="product_name w-75 py-2 text-14">Unisex for women, for the men</h2>
+        <p class="product_price text-16">N5,000</p>
         <v-container class="d-flex justify-space-between align-center pa-0">
-          <p class="product_desc">Blue 42</p>
+          <p class="product_desc text-12">Blue 42</p>
           <div class="d-flex align-center ">
-            <button class="rounded px-3 py-2">+</button>
-            <p class="mx-2">2</p>
-            <button class="rounded px-3 py-2">-</button>
+            <button class="rounded px-2 py-1">+</button>
+            <p class=" qty px-2 py-1">2</p>
+            <button class="rounded px-2 py-1">-</button>
           </div>
         </v-container>
       </div>
@@ -35,14 +35,14 @@ export default {
         <img :src="blueShoe" alt="blueShoe" />
       </div>
       <div class=" w-66">
-        <h2 class="product_name w-50 py-2">Unisex for women, for the men</h2>
-        <p class="product_price">N5,000</p>
+        <h2 class="product_name w-75 py-2 text-14">Unisex for women, for the men</h2>
+        <p class="product_price text-16">N5,000</p>
         <div class="d-flex justify-space-between align-center pa-0">
-          <p class="product_desc">Blue 42</p>
+          <p class="product_desc text-12">Blue 42</p>
           <div class=" d-flex align-center">
-            <button class="rounded px-3 py-2">+</button>
-                  <p class="mx-2">2</p>
-            <button class="rounded px-3 py-2">-</button>
+            <button class="rounded px-2 py-1">+</button>
+                  <p class=" qty px-2 py-1">2</p>
+            <button class="rounded px-2 py-1">-</button>
           </div>
       
         </div>
@@ -57,16 +57,13 @@ export default {
 </template>
 <style scoped>
 .product_name {
-  font-size: 14px;
   line-height: 18px;
   font-weight: 400;
 }
 .product_price {
-  font-size: 16px;
   font-weight: 600;
 }
 .product_desc {
-  font-size: 12px;
   color: #626a77;
 }
 .blueShoe {
@@ -78,5 +75,8 @@ export default {
 button {
   background: #f8f8f8;
   color: #7940ee;
+}
+.qty{
+  background: #E0E0E0;
 }
 </style>

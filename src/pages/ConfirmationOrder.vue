@@ -1,11 +1,12 @@
 <script>
 import blueShoe from "@/assets/blueShoe.svg";
 import brownShoe from "@/assets/brownShoe.svg";
-import phone from "@/assets/phoneIcon.svg";
-import darkerProfileIcon from "@/assets/profileIcon.svg";
-import envelopeIcon from "@/assets/envelopeIcon.svg";
-import locationIcon from "@/assets/locationIcon.svg";
+import darkerPhoneIcon from "@/assets/darkerPhoneIcon.svg";
+import darkerProfileIcon from "@/assets/darkerProfileIcon.svg";
+import darkerEnvelopeIcon from "@/assets/darkerEnvelopeIcon.svg";
+import darkerLocationIcon from "@/assets/darkerLocationIcon.svg";
 import PurpleModal from "@/components/PurpleModal.vue";
+
 
 
 export default {
@@ -16,9 +17,9 @@ export default {
     return {
       blueShoe,
       brownShoe,
-      phone,
-      envelopeIcon,
-      locationIcon,
+      darkerPhoneIcon,
+      darkerEnvelopeIcon,
+      darkerLocationIcon,
       darkerProfileIcon
     };
   },
@@ -61,21 +62,24 @@ export default {
     <div class="ship-card my-4 pa-4 rounded-xl">
       <h1 class="font-weight-bold text-12  " >Shipping information</h1>
       <div  class="d-flex my-4">
-        <img :src="darkerProfileIcon" alt="profile">  <p class="text-12">Abdulraheem Abdulsobur</p>
+        <img class="icon" :src="darkerProfileIcon" alt="profile">  <p class="text-12 user-dets">Abdulraheem Abdulsobur</p>
       </div>
        <div class="d-flex my-4">
-        <img :src="envelopeIcon" alt="envelope">  <p class="text-12">abdul002temitope@gmail.com</p>
+        <img class="icon" :src="darkerEnvelopeIcon" alt="envelope">  <p class="text-12 user-dets">abdul002temitope@gmail.com</p>
       </div>
        <div class="d-flex my-4">
-        <img :src="phone" alt="telephone">  <p class="text-12">+234 8082286122</p>
+        <img class="icon" :src="darkerPhoneIcon" alt="teledarkerPhoneIcon">  <p class="text-12 user-dets">+234 8082286122</p>
       </div>
        <div class="d-flex my-4">
-        <img :src="locationIcon" alt="location">  <p class="text-12">Araromi street noforija epe, Lagos </p>
+        <img class="icon" :src="darkerLocationIcon" alt="location">  <p class="text-12 user-dets">Araromi street noforija epe, Lagos </p>
       </div>
     </div>
   </div>
    <div class="position-fixed bottom-0 w-100 ">
-       <PurpleModal :cart="true" :checkout="false"/>
+       <PurpleModal :cart="false" 
+       :confirmation="true"
+       :checkout="false"
+       :linkPage="OrderPlaced"/>
  </div>
 </template>
 <style>
@@ -100,5 +104,12 @@ p {
 .ship-card{
     background: #f9fafb;
    
+}
+.icon{
+  width: 14px;
+  height: 16px;
+}
+.user-dets{
+  color:#4b5563;
 }
 </style>

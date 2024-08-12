@@ -3,6 +3,7 @@ import profile from "@/assets/profileIcon.svg";
 import email from "@/assets/envelopeIcon.svg";
 import phone from "@/assets/phoneIcon.svg";
 import location from "@/assets/locationIcon.svg";
+
 export default {
   data() {
     return {
@@ -31,29 +32,29 @@ export default {
 <template>
   <div class="d-flex home pa-4 flex-column overflow-x-hidden">
     <div class="first ma-0 position-relative d-flex flex-column">
-    <h1>Kindly input your information</h1>
+    <h1 class="text-24">Kindly input your information</h1>
     <form class="d-flex flex-column position-relative mb-10">
-      <label class="text-grey-darken-2 mt-4" for="">Full name</label>
+      <label class="text-grey-darken-2 mt-4 text-14" for="">Full name</label>
       <div class="d-flex align-baseline border my-4 rounded-lg py-4 px-5">
         <img :src="profile" alt="profile gray Icon" />
         <input type="text" class="px-2" />
       </div>
-      <label class="text-grey-darken-2 mt-4" for=""> Email</label>
+      <label class="text-grey-darken-2 mt-4 text-14" for=""> Email</label>
       <div class="d-flex align-baseline border my-4 rounded-lg py-4 px-5">
         <img :src="email" alt="email gray Icon" />
         <input type="email" class="px-2" />
       </div>
-      <label class="text-grey-darken-2" for="">Phone number</label>
+      <label class="text-grey-darken-2 text-14" for="">Phone number</label>
       <div class="d-flex align-baseline border my-4 rounded-lg py-4 px-5">
         <img :src="phone" alt="phone gray Icon" />
         <input type="tel" class="px-2" />
       </div>
 
-      <label class="text-grey-darken-1 my-4" for="">Delivery Address</label>
+      <label class="text-black my-4 text-16 font-weight-bold" for="">Delivery Address</label>
 
       <div class="w-100 d-flex justify-space-between mb-2 mb-10">
         <div class="w-50">
-          <label for="">Location</label>
+          <label for="" class="text-164">Location</label>
 
           <div
             class="d-flex align-baseline py-3 px-5 width border my-4 rounded-lg"
@@ -63,7 +64,7 @@ export default {
           </div>
         </div>
         <div class="w-50">
-          <label for="">Area</label>
+          <label for="" class="text-14">Area</label>
           <div
             class="d-flex align-baseline py-3 px-5 width border my-4 rounded-lg"
           >
@@ -84,6 +85,9 @@ export default {
         :shipping="true"
         :total="true"
         :shopping="false"
+        :confirmation="false"
+        :linkPage="ConfirmationOrder"
+       
       />
   </div>
 </template>

@@ -1,4 +1,5 @@
 <script>
+
 export default {
   name: "CheckoutPage",
 };
@@ -6,10 +7,10 @@ export default {
 <template>
   <v-container class="pa-0">
    <div class="pa-4">
-     <h1 class="text-h5 w-75 mt-6 font-weight-bold">
+     <h1 class="text-24 w-75 mt-6 font-weight-bold">
       Thanks for being our customer
     </h1>
-    <p class="my-4">
+    <p class="my-4 text-14">
       Input your coupon code to get Get 20% OFF Limited time offer
     </p>
     <div>
@@ -18,7 +19,9 @@ export default {
       </div>
     </div>
    </div>
-    <PurpleModal :cart="false" :checkout="true" />
+   <div class="position-absolute bottom-0">
+     <PurpleModal :cart="false" :checkout="true" :confirmation="false" :linkPage="CustomerInfo" />
+   </div>
   </v-container>
 </template>
 <style scoped>

@@ -3,6 +3,7 @@ import profile from "@/assets/profileIcon.svg";
 import email from "@/assets/envelopeIcon.svg";
 import phone from "@/assets/phoneIcon.svg";
 import location from "@/assets/locationIcon.svg";
+
 export default {
   data() {
     return {
@@ -84,6 +85,9 @@ export default {
         :shipping="true"
         :total="true"
         :shopping="false"
+        :confirmation="false"
+        :linkPage="ConfirmationOrder"
+       
       />
   </div>
 </template>

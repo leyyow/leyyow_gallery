@@ -1,4 +1,5 @@
 <script>
+
 export default {
   name: "CheckoutPage",
 };
@@ -19,7 +20,7 @@ export default {
     </div>
    </div>
    <div class="position-absolute bottom-0">
-     <PurpleModal :cart="false" :checkout="true" />
+     <PurpleModal :cart="false" :checkout="true" :confirmation="false" :linkPage="CustomerInfo" />
    </div>
   </v-container>
 </template>

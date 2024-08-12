@@ -1,6 +1,7 @@
 <script>
 import blueShoe from "@/assets/blueShoe.svg";
 import PurpleModal from "@/components/PurpleModal.vue";
+
 export default {
   data() {
     return {
@@ -52,7 +53,7 @@ export default {
     
   </v-container>
  <div class="position-fixed bottom-0 w-100 ">
-       <PurpleModal :cart="true" :checkout="false"/>
+       <PurpleModal :cart="true" :checkout="false" :confirmation="false" :linkPage="CheckoutPage"/>
  </div>
 </template>
 <style scoped>

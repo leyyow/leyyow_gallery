@@ -8,6 +8,7 @@ import darkerLocationIcon from "@/assets/darkerLocationIcon.svg";
 import PurpleModal from "@/components/PurpleModal.vue";
 
 
+
 export default {
   components: {
    PurpleModal 
@@ -75,7 +76,10 @@ export default {
     </div>
   </div>
    <div class="position-fixed bottom-0 w-100 ">
-       <PurpleModal :cart="true" :checkout="false"/>
+       <PurpleModal :cart="false" 
+       :confirmation="true"
+       :checkout="false"
+       :linkPage="OrderPlaced"/>
  </div>
 </template>
 <style>

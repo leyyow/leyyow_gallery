@@ -1,46 +1,105 @@
 <template>
   <v-app>
-    <v-container class="products">
-      <v-row>
+  
+      <div class="products" >
        
-          <v-col class="card">
-            <v-img class="img" :src="blackShoe"> </v-img>
-          </v-col>
-          <v-col class="card">
-            <v-img class="img" :src="brownShoe"> </v-img>
-          </v-col>
-          <v-col class="card">
-            <v-img class="img" :src="blueShoe"> </v-img>
-          </v-col>
-          <v-col class="card">
-            <v-img class="img" :src="blackShoe"> </v-img>
-          </v-col>
-          <v-col class="card">
-            <v-img class="img" :src="brownShoe"> </v-img>
-          </v-col>
-          <v-col class="card">
-            <v-img class="img" :src="blueShoe"> </v-img>
-          </v-col>
-          <v-col class="card">
-            <v-img class="img" :src="blackShoe"> </v-img>
-          </v-col>
-          <v-col class="card">
-            <v-img class="img" :src="brownShoe"> </v-img>
-          </v-col>
-          <v-col class="card">
-            <v-img class="img" :src="blueShoe"> </v-img>
-          </v-col>
-          <v-col class="card">
-            <v-img class="img" :src="blackShoe"> </v-img>
-          </v-col>
-          
-      </v-row>
-    </v-container>
+          <div  class="card">
+            <img class="img" :src="whiteShoe" alt="A nike shoe" /> 
+          </div >
+          <div  class="card">
+            <img class="img" :src="brownShoe" alt="A nike shoe" loading ="lazy" />
+          </div >
+          <div  class="card">
+            <img class="img" :src="blueShoe" alt="A nike shoe">
+          </div >
+          <div  class="card">
+            <img class="img" :src="whiteShoe" alt="A nike shoe" loading ="lazy" />
+          </div >
+          <div  class="card">
+            <img class="img" :src="brownShoe" alt="A nike shoe" loading ="lazy" />
+          </div >
+          <div  class="card">
+            <img class="img" :src="blueShoe" alt="A nike shoe" loading ="lazy" />
+          </div >
+          <div  class="card">
+            <img class="img" :src="whiteShoe" alt="A nike shoe" loading ="lazy" />
+          </div >
+          <div  class="card">
+            <img class="img" :src="brownShoe" alt="A nike shoe" loading ="lazy" />
+          </div >
+          <div  class="card">
+            <img class="img" :src="blueShoe" alt="A nike shoe" loading ="lazy" />
+          </div >
+          <div  class="card">
+            <img class="img" :src="whiteShoe" alt="A nike shoe" loading ="lazy" />
+          </div >
+           <div  class="card">
+            <img class="img" :src="whiteShoe" alt="A nike shoe" /> 
+          </div >
+          <div  class="card">
+            <img class="img" :src="brownShoe" alt="A nike shoe" loading ="lazy" />
+          </div >
+          <div  class="card">
+            <img class="img" :src="blueShoe" alt="A nike shoe">
+          </div >
+          <div  class="card">
+            <img class="img" :src="whiteShoe" alt="A nike shoe" loading ="lazy" />
+          </div >
+          <div  class="card">
+            <img class="img" :src="brownShoe" alt="A nike shoe" loading ="lazy" />
+          </div >
+          <div  class="card">
+            <img class="img" :src="blueShoe" alt="A nike shoe" loading ="lazy" />
+          </div >
+          <div  class="card">
+            <img class="img" :src="whiteShoe" alt="A nike shoe" loading ="lazy" />
+          </div >
+          <div  class="card">
+            <img class="img" :src="brownShoe" alt="A nike shoe" loading ="lazy" />
+          </div >
+          <div  class="card">
+            <img class="img" :src="blueShoe" alt="A nike shoe" loading ="lazy" />
+          </div >
+          <div  class="card">
+            <img class="img" :src="whiteShoe" alt="A nike shoe" loading ="lazy" />
+          </div >
+            <div  class="card">
+            <img class="img" :src="whiteShoe" alt="A nike shoe" /> 
+          </div >
+          <div  class="card">
+            <img class="img" :src="brownShoe" alt="A nike shoe" loading ="lazy" />
+          </div >
+          <div  class="card">
+            <img class="img" :src="blueShoe" alt="A nike shoe">
+          </div >
+          <div  class="card">
+            <img class="img" :src="whiteShoe" alt="A nike shoe" loading ="lazy" />
+          </div >
+          <div  class="card">
+            <img class="img" :src="brownShoe" alt="A nike shoe" loading ="lazy" />
+          </div >
+          <div  class="card">
+            <img class="img" :src="blueShoe" alt="A nike shoe" loading ="lazy" />
+          </div >
+          <div  class="card">
+            <img class="img" :src="whiteShoe" alt="A nike shoe" loading ="lazy" />
+          </div >
+          <div  class="card">
+            <img class="img" :src="brownShoe" alt="A nike shoe" loading ="lazy" />
+          </div >
+          <div  class="card">
+            <img class="img" :src="blueShoe" alt="A nike shoe" loading ="lazy" />
+          </div >
+          <div  class="card">
+            <img class="img" :src="whiteShoe" alt="A nike shoe" loading ="lazy" />
+          </div >
+      </div >
+
   </v-app>
 </template>
 
 <script setup>
-import blackShoe from "@/assets/blackShoe.svg";
+import whiteShoe from "@/assets/newShoe.png";
 import brownShoe from "@/assets/brownShoe.svg";
 import blueShoe from "@/assets/blueShoe.svg";
 </script>
@@ -71,8 +130,8 @@ import blueShoe from "@/assets/blueShoe.svg";
   display: grid;
 
 }
-/* .products {
+.products {
   display: grid;
     grid-template-columns: auto auto auto;
-} */
+}
 </style>

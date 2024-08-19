@@ -1,15 +1,28 @@
 <template>
-  <div class="d-flex justify-end header">
-    <button @click="toggleMenu" class="menu-button">☰</button>
+  <div class="d-flex justify-space-between header pt-3 mb-6 w-100">
+    <h1 @click="goToHome">Logo</h1>
+    <button @click="toggleMenu" class="menu-button">
+      <img :src="menu" alt="menu icon" />
+    </button>
     <div v-if="menuOpen" class="menu-overlay" @click="toggleMenu"></div>
     <div :class="['menu', { open: menuOpen }]">
-      <button class="close-button" @click="toggleMenu">✕</button>
+      <button class="close-button" @click="toggleMenu">
+        <img :src="cancelWhite" alt="cancelWhite" />
+      </button>
       <nav class="menu-items">
         <ul>
-          <li v-for="item in menuItems" :key="item.name">
+          <li
+            v-for="item in menuItems"
+            :key="item.name"
+            class="text-24 font-weight-medium"
+          >
             <a :href="item.link">{{ item.name }}</a>
           </li>
         </ul>
+        <div class="text-right text-14 text-white">
+          <p class="mb-3">Return Policy</p>
+          <p class=" ">FAQ</p>
+        </div>
       </nav>
       <div class="social-icons">
         <a v-for="icon in socialIcons" :key="icon.platform" :href="icon.link">
@@ -21,25 +34,43 @@
 </template>
 
 <script>
+import menu from "@/assets/menu.svg";
+import cancelWhite from "@/assets/cancelWhite.svg";
 export default {
-  props: {
-    menuItems: {
-      type: Array,
-      required: true,
-    },
-    socialIcons: {
-      type: Array,
-      required: true,
-    },
-  },
+  // props: {
+  //   menuItems: {
+  //     type: Array,
+  //     required: true,
+  //   },
+  //   socialIcons: {
+  //     type: Array,
+  //     required: true,
+  //   },
+  // },
   data() {
     return {
+      menu,
+      cancelWhite,
       menuOpen: false,
+      menuItems: [
+        { name: "Home", link: "#" },
+        { name: "About us", link: "#" },
+        { name: "Testimonial", link: "#" },
+        { name: "Shop", link: "#" },
+      ],
+      socialIcons: [
+        { platform: "Instagram", link: "#", iconClass: "fab fa-instagram" },
+        { platform: "Twitter", link: "#", iconClass: "fab fa-twitter" },
+        { platform: "Facebook", link: "#", iconClass: "fab fa-facebook-f" },
+      ],
     };
   },
   methods: {
     toggleMenu() {
       this.menuOpen = !this.menuOpen;
+    },
+    goToHome() {
+      this.$router.push({ name: "/" });
     },
   },
 };
@@ -48,7 +79,7 @@ export default {
 <style scoped>
 .menu-button {
   position: relative;
- 
+
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -71,17 +102,18 @@ export default {
 
 .menu {
   position: fixed;
-  top: 0;
+  top: 25px;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
   align-items: flex-end;
   right: -100%;
-  height: 100%;
-  width: 80%;
-  background-color: #4a5de8;
+  height: 80%;
+  width: 60%;
+  background-color: #4f35c6;
   z-index: 1001;
   transition: right 0.3s ease;
   padding: 20px;
+  border-radius: 1600px 0% 0% 1600px;
 }
 
 .menu.open {
@@ -89,9 +121,9 @@ export default {
 }
 
 .close-button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  position: relative;
+  top: 22px;
+  right: 0px;
   border: none;
   font-size: 24px;
   cursor: pointer;
@@ -100,7 +132,8 @@ export default {
 .menu-items ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 73px 0;
+  text-align: right;
 }
 
 .menu-items li {
@@ -116,13 +149,12 @@ export default {
 .social-icons {
   display: flex;
   gap: 15px;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
+  margin-top: 12px;
 }
 
 .social-icons a {
   color: white;
-  font-size: 24px;
+  /* font-size: 24px; */
+  width: 15px;
 }
 </style>

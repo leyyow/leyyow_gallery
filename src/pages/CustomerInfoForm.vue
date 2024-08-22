@@ -32,21 +32,17 @@ export default {
       }
       return null;
     },
-
-    phoneError() {
+    isPhoneValid() {
       const phonePattern = /^\d{11}$/;
-      if (this.phone === "" || !phonePattern.test(this.phone)) {
-        return "Phone number must be 11 digits long.";
-      }
-      return null;
+      return phonePattern.test(this.phone);
     },
-    emailError() {
+
+    isEmailValid() {
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailPattern.test(this.email)) {
-        return "Invalid email format.";
-      }
-      return null;
+      return emailPattern.test(this.email);
     },
+   
+    
     isFilled() {
       return (
         this.name !== "" &&
@@ -92,9 +88,13 @@ export default {
           class="d-flex align-center mt-4 mb-2 rounded-lg py-4 px-5 input_div"
         >
           <img :src="profileImg" alt="profile gray Icon" />
-          <input type="text" class="px-2" v-model="name" />
+          <input type="text" class="px-2" v-model="name"  :class="{ error: errorMessage && !name }" />
         </div>
-        <span v-if="nameError" class="text-red">{{ nameError }}</span>
+        <div v-if="errorMessage">
+          <span v-if="!name" class="text-red"
+            >This field is required</span
+          >
+        </div>
 
         <label class="text-grey-darken-2 mt-4 text-14" for="">Email</label>
         <div
@@ -121,9 +121,13 @@ export default {
           class="d-flex align-center mt-4 mb-2 rounded-lg py-4 px-5 input_div"
         >
           <img :src="phoneImg" alt="phone gray Icon" />
-          <input type="tel" class="px-2" v-model="phone" />
+          <input type="tel" class="px-2" v-model="phone" :class="{ error: errorMessage && !isPhoneValid }"/>
         </div>
-        <span v-if="phoneError" class="text-red">{{ phoneError }}</span>
+        <div v-if="errorMessage">
+          <span v-if="!isPhoneValid" class="text-red"
+            >Invalid Phone number Format</span
+          >
+        </div>
 
         <label class="text-black my-4 text-16 font-weight-bold" for=""
           >Delivery Address</label
@@ -136,7 +140,7 @@ export default {
               class="d-flex align-center py-3 px-5 width my-4 rounded-lg input_div"
             >
               <img :src="location" alt="location_pointer" />
-              <input type="text" class="mx-2" />
+              <input type="text" class="mx-2" : />
             </div>
           </div>
           <div class="w-50">

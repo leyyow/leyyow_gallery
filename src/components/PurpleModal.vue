@@ -44,11 +44,23 @@ export default {
       type: String,
       required: true,
     },
+     needed: {
+      type: Boolean,
+       required: true,
+       default: false,
+    },
   },
+  methods: {
+     goToShop() {
+      this.$router.push("/ProductGrid" );
+    },
+   
 
+  },
   data() {
     return {};
   },
+
 };
 </script>
 <template>
@@ -134,17 +146,13 @@ export default {
         <p class="text-subtitle font-weight-bold">N 13,000</p>
       </div>
       <div class="d-flex flex-column my-3" v-if="shopping">
-        <button class="pa-3 text-16 rounded-lg mt-5">
-          <a style="color: white; text-decoration: none" href="/CustomerInfo">
-            Continue Shopping</a
-          >
+        <button class="pa-3 text-16 rounded-lg mt-5" @click="goToShop()">
+            Continue Shopping
         </button>
       </div>
-      <div class="d-flex flex-column my-4">
-        <button class="checkout pa-3 rounded-lg my-4 mt-1 text-16">
-          <a style="text-decoration: none" href="{{ linkPage }}">
+      <div class="d-flex flex-column my-4" v-if="needed">
+        <button class="checkout pa-3 rounded-lg my-4 mt-1 text-16" @click="goToCheckout()">
             Proceed to checkout
-          </a>
         </button>
       </div>
     </div>

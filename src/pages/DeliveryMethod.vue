@@ -7,7 +7,7 @@ export default {
   <v-container class="pa-0">
     <div class="pa-4">
       <h1 class="text-24 w-75 mt-6 font-weight-bold">
-        Thanks for being our customer
+      Have a coupon?
       </h1>
       <p class="my-4 text-16">
         Input your coupon code to get Get 20% OFF Limited time offer

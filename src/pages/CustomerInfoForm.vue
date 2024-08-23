@@ -73,14 +73,14 @@ export default {
 <template>
   <div class="d-flex home pa-4 flex-column overflow-x-hidden">
     <div class="first ma-0 position-relative d-flex flex-column">
-      <h1 class="text-24">Kindly input your information</h1>
+      <h1 class="text-32">Kindly input your information</h1>
       <form
         class="d-flex flex-column position-relative mb-10"
         @submit.prevent="submitForm"
       >
         <label class="text-grey-darken-2 mt-4 text-16" for="">Full name</label>
         <div
-          class="d-flex align-center mt-4 mb-2 rounded-lg py-4 px-5 input_div"
+          class="d-flex align-center mt-4 mb-2 rounded-lg py-5 px-5 input_div"
         >
           <img :src="profileImg" alt="profile gray Icon" />
           <input
@@ -91,12 +91,12 @@ export default {
           />
         </div>
         <div v-if="errorMessage">
-          <span v-if="!name" class="text-red">This field is required</span>
+          <span v-if="!name" class="text-red text-16">This field is required</span>
         </div>
 
         <label class="text-grey-darken-2 mt-4 text-16" for="">Email</label>
         <div
-          class="d-flex align-center mt-4 mb-2 rounded-lg py-4 px-5 input_div"
+          class="d-flex align-center mt-4 mb-2 rounded-lg py-5 px-5 input_div"
         >
           <img :src="emailImg" alt="email gray Icon" />
           <input
@@ -107,7 +107,7 @@ export default {
           />
         </div>
         <div v-if="errorMessage">
-          <span v-if="!isEmailValid" class="text-red"
+          <span v-if="!isEmailValid" class="text-red text-16"
             >Invalid Email Format</span
           >
         </div>
@@ -116,7 +116,7 @@ export default {
           >Phone number</label
         >
         <div
-          class="d-flex align-center mt-4 mb-2 rounded-lg py-4 px-5 input_div"
+          class="d-flex align-center mt-4 mb-2 rounded-lg py-5 px-5 input_div"
         >
           <img :src="phoneImg" alt="phone gray Icon" />
           <input
@@ -127,12 +127,12 @@ export default {
           />
         </div>
         <div v-if="errorMessage">
-          <span v-if="!isPhoneValid" class="text-red"
+          <span v-if="!isPhoneValid" class="text-red text-16"
             >Invalid Phone number Format</span
           >
         </div>
 
-        <label class="text-black my-4 text-16 font-weight-bold" for=""
+        <label class="text-black my-4 text-18 font-weight-bold" for=""
           >Delivery Address</label
         >
 
@@ -140,7 +140,7 @@ export default {
           <div class="w-50">
             <label for="" class="text-164">Location</label>
             <div
-              class="d-flex align-center py-3 px-5 width my-4 rounded-lg input_div"
+              class="d-flex align-center py-5 px-5 width my-4 rounded-lg input_div"
             >
               <img :src="location" alt="location_pointer" />
               <input type="text" class="mx-2" />
@@ -149,9 +149,9 @@ export default {
           <div class="w-50">
             <label for="" class="text-16">Area</label>
             <div
-              class="d-flex align-center py-3 px-5 width my-4 rounded-lg input_div"
+              class="d-flex align-center py-5 px-5 width my-4 rounded-lg input_div"
             >
-              <img :src="location" alt="location_pointer" />
+              <img :src="location" alt="location_pointer"  />
               <input type="text" class="mx-2" />
             </div>
           </div>
@@ -192,6 +192,10 @@ input {
 .input_div {
   border: 1px solid #eaeaea;
   transition: border-color 0.3s ease;
+}
+.input_div img{
+  width: 35px;
+  height: 25px;
 }
 .input_div input:focus {
   outline: none;

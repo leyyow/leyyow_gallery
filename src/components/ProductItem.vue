@@ -20,17 +20,17 @@ export default {
       cart,
       selectedItem: null,
       sizes: [
-        { text: "Small", value: 1 },
-        { text: "Medium", value: 2 },
-        { text: "Large", value: 3 },
-        { text: "XLarge", value: 4 },
+        { text: "Small", value: 'Small' },
+        { text: "Medium", value: 'Medium' },
+        { text: "Large", value: 'Large' },
+        { text: "XLarge", value: 'XLarge' },
       ],
       selectedColor: null,
       colors: [
-        { text: "Red", value: 1 },
-        { text: "Blue", value: 2 },
-        { text: "Yellow", value: 3 },
-        { text: "Black", value: 4 },
+        { text: "Red", value: 'Red' },
+        { text: "Blue", value: 'Blue' },
+        { text: "Yellow", value: 'Yellow' },
+        { text: "Black", value: 'Black' },
       ],
     };
   },
@@ -42,13 +42,13 @@ export default {
       <img :src="image" alt="product " class="product_img" />
     </div>
     <div class="header_container">
-      <h2 style="width: 50%">{{ name }}</h2>
-      <p class="price">N5,000</p>
+      <h2 style="width: 50%" class="text-24">{{ name }}</h2>
+      <p class="price text-22 font-weight-bold">N5,000</p>
     </div>
 
     <div class="select_container">
       <div>
-        <h4>Colors</h4>
+        <h4 class="text-20">Colors</h4>
         <SelectOption
           v-model="selectedColor"
           placeholder="Select Color"
@@ -56,7 +56,7 @@ export default {
         />
       </div>
       <div>
-        <h4>Sizes</h4>
+        <h4 class="text-20">Sizes</h4>
         <SelectOption
           v-model="selectedItem"
           placeholder="Select Size"
@@ -70,7 +70,7 @@ export default {
         class="btn py-4 px-4 rounded-lg d-flex justify-space-between"
       >
         <i class=""> </i>
-        <p>Add to cart</p>
+        <p class="text-18">Add to cart</p>
         <div class="position-relative">
           <p class="position-absolute text-10 top-0 right-0 cart_counter translate-middle badge  bg-white"> 1 </p>
           <img :src="cart" alt="cart icon" class="cart_img" />

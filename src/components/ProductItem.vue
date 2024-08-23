@@ -71,10 +71,10 @@ export default {
       >
         <i class=""> </i>
         <p>Add to cart</p>
-  <div class="postion-relative">
-    <!-- <i class="position-absolute top-10 bg-white rounded text-orange">8</i> -->
+        <div class="position-relative">
+          <p class="position-absolute text-10 top-0 right-0 cart_counter translate-middle badge  bg-white"> 1 </p>
           <img :src="cart" alt="cart icon" class="cart_img" />
-  </div>
+        </div>
       </button>
       <div></div>
     </div>
@@ -116,8 +116,8 @@ h2 {
 .container {
   margin: 24px;
 }
-.top-10{
-    top: 10px;
+.top-10 {
+  top: 10px;
 }
 .second_container {
   width: 100%;
@@ -140,24 +140,17 @@ h2 {
 h4 {
   margin: 10px 0;
 }
-.blue,
-.black,
-.brown {
-  border-radius: 8px;
-  padding: 0;
-  margin: 3px;
-}
-.blue {
-  background: #eaf1ff;
-}
-.black {
-  background-color: #f9eeeb;
-}
-.brown {
-  background-color: #ebe7b8;
-}
+
+
 .btn {
   background: linear-gradient(to right, #5f40ee, #943fed);
   color: white;
+}
+.cart_counter {
+  width: 12px;
+  height: 15px;
+  border-radius: 3px;
+  padding: 0px 3px;
+  color: orange;
 }
 </style>

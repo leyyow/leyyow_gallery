@@ -9,8 +9,11 @@ declare module 'vue' {
   export interface GlobalComponents {
     AppFooter: typeof import('./src/components/AppFooter.vue')['default']
     CartCatalogue: typeof import('./src/components/CartCatalogue.vue')['default']
+    MenuBar: typeof import('./src/components/MenuBar.vue')['default']
+    ProductItem: typeof import('./src/components/ProductItem.vue')['default']
     PurpleModal: typeof import('./src/components/PurpleModal.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SelectDrpDown: typeof import('./src/components/SelectDrpDown.vue')['default']
   }
 }

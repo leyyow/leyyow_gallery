@@ -41,8 +41,7 @@ export default {
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailPattern.test(this.email);
     },
-   
-    
+
     isFilled() {
       return (
         this.name !== "" &&
@@ -52,10 +51,7 @@ export default {
       );
     },
     isFormValid() {
-      return (
-        this.isFilled && 
-        this.isEmailValid
-      );
+      return this.isFilled && this.isEmailValid;
     },
   },
   methods: {
@@ -63,14 +59,13 @@ export default {
       this.isExpanded = !this.isExpanded;
     },
     handleSubmit(e) {
-    if (!this.isFormValid) {
-      e.preventDefault();
-      this.errorMessage = true;
-      return
-    }
-    this.errorMessage = false
-   }
-   
+      if (!this.isFormValid) {
+        e.preventDefault();
+        this.errorMessage = true;
+        return;
+      }
+      this.errorMessage = false;
+    },
   },
 };
 </script>
@@ -83,20 +78,23 @@ export default {
         class="d-flex flex-column position-relative mb-10"
         @submit.prevent="submitForm"
       >
-        <label class="text-grey-darken-2 mt-4 text-14" for="">Full name</label>
+        <label class="text-grey-darken-2 mt-4 text-16" for="">Full name</label>
         <div
           class="d-flex align-center mt-4 mb-2 rounded-lg py-4 px-5 input_div"
         >
           <img :src="profileImg" alt="profile gray Icon" />
-          <input type="text" class="px-2" v-model="name"  :class="{ error: errorMessage && !name }" />
+          <input
+            type="text"
+            class="px-2"
+            v-model="name"
+            :class="{ error: errorMessage && !name }"
+          />
         </div>
         <div v-if="errorMessage">
-          <span v-if="!name" class="text-red"
-            >This field is required</span
-          >
+          <span v-if="!name" class="text-red">This field is required</span>
         </div>
 
-        <label class="text-grey-darken-2 mt-4 text-14" for="">Email</label>
+        <label class="text-grey-darken-2 mt-4 text-16" for="">Email</label>
         <div
           class="d-flex align-center mt-4 mb-2 rounded-lg py-4 px-5 input_div"
         >
@@ -114,14 +112,19 @@ export default {
           >
         </div>
 
-        <label class="text-grey-darken-2 text-14 mt-4" for=""
+        <label class="text-grey-darken-2 text-16 mt-4" for=""
           >Phone number</label
         >
         <div
           class="d-flex align-center mt-4 mb-2 rounded-lg py-4 px-5 input_div"
         >
           <img :src="phoneImg" alt="phone gray Icon" />
-          <input type="tel" class="px-2" v-model="phone" :class="{ error: errorMessage && !isPhoneValid }"/>
+          <input
+            type="tel"
+            class="px-2"
+            v-model="phone"
+            :class="{ error: errorMessage && !isPhoneValid }"
+          />
         </div>
         <div v-if="errorMessage">
           <span v-if="!isPhoneValid" class="text-red"
@@ -140,11 +143,11 @@ export default {
               class="d-flex align-center py-3 px-5 width my-4 rounded-lg input_div"
             >
               <img :src="location" alt="location_pointer" />
-              <input type="text" class="mx-2" : />
+              <input type="text" class="mx-2" />
             </div>
           </div>
           <div class="w-50">
-            <label for="" class="text-14">Area</label>
+            <label for="" class="text-16">Area</label>
             <div
               class="d-flex align-center py-3 px-5 width my-4 rounded-lg input_div"
             >

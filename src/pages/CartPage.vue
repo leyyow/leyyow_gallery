@@ -6,7 +6,7 @@ export default {
   data() {
     return {
       blueShoe,
-      PurpleModal
+      PurpleModal,
     };
   },
 };
@@ -14,18 +14,20 @@ export default {
 <template>
   <v-container class="pa-5 ma-0">
     <h2 class="text-16">Cart (2 items)</h2>
-    <v-card class="d-flex justify-space-between pa-4 my-4 mb-7 rounded-xl" >
+    <v-card class="d-flex justify-space-between pa-4 my-4 mb-7 rounded-xl">
       <div class="w-33 rounded-lg blueShoe mr-3 d-flex align-center">
         <img :src="blueShoe" alt="blueShoe" />
       </div>
       <div class="w-66">
-        <h2 class="product_name w-75 py-2 text-14">Unisex for women, for the men</h2>
+        <h2 class="product_name w-75 py-2 text-16">
+          Unisex for women, for the men
+        </h2>
         <p class="product_price text-16">N5,000</p>
         <v-container class="d-flex justify-space-between align-center pa-0">
           <p class="product_desc text-12">Blue 42</p>
-          <div class="d-flex align-center ">
+          <div class="d-flex align-center">
             <button class="rounded px-2 py-1">+</button>
-            <p class=" qty px-2 py-1">2</p>
+            <p class="qty px-2 py-1">2</p>
             <button class="rounded px-2 py-1">-</button>
           </div>
         </v-container>
@@ -35,26 +37,30 @@ export default {
       <div class="w-33 rounded-lg blueShoe mr-3 d-flex align-center">
         <img :src="blueShoe" alt="blueShoe" />
       </div>
-      <div class=" w-66">
-        <h2 class="product_name w-75 py-2 text-14">Unisex for women, for the men</h2>
+      <div class="w-66">
+        <h2 class="product_name w-75 py-2 text-16">
+          Unisex for women, for the men
+        </h2>
         <p class="product_price text-16">N5,000</p>
         <div class="d-flex justify-space-between align-center pa-0">
           <p class="product_desc text-12">Blue 42</p>
-          <div class=" d-flex align-center">
+          <div class="d-flex align-center">
             <button class="rounded px-2 py-1">+</button>
-                  <p class=" qty px-2 py-1">2</p>
+            <p class="qty px-2 py-1">2</p>
             <button class="rounded px-2 py-1">-</button>
           </div>
-      
         </div>
-        
       </div>
     </v-card>
-    
   </v-container>
- <div class="position-fixed bottom-0 w-100 ">
-       <PurpleModal :cart="true" :checkout="false" :confirmation="false" :linkPage="CheckoutPage"/>
- </div>
+  <div class="position-fixed bottom-0 w-100">
+    <PurpleModal
+      :cart="true"
+      :checkout="false"
+      :confirmation="false"
+      :linkPage="CheckoutPage"
+    />
+  </div>
 </template>
 <style scoped>
 .product_name {
@@ -77,7 +83,7 @@ button {
   background: #f8f8f8;
   color: #7940ee;
 }
-.qty{
-  background: #E0E0E0;
+.qty {
+  background: #e0e0e0;
 }
 </style>

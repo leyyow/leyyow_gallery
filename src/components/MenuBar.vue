@@ -10,7 +10,7 @@
         <img :src="cancelWhite" alt="cancelWhite" />
       </button>
       <nav class="menu-items">
-        <ul>
+        <ul class=" mb-10 mt-13">
           <li
             v-for="item in menuItems"
             :key="item.name"
@@ -19,12 +19,12 @@
             <a :href="item.link">{{ item.name }}</a>
           </li>
         </ul>
-        <div class="text-right text-14 text-white">
+        <div class="text-right text-16 text-white">
           <p class="mb-3">Return Policy</p>
           <p class=" ">FAQ</p>
         </div>
       </nav>
-      <div class="social-icons">
+      <div class="social-icons mb-10">
         <a v-for="icon in socialIcons" :key="icon.platform" :href="icon.link">
           <i :class="icon.iconClass"></i>
         </a>
@@ -107,7 +107,7 @@ export default {
   flex-direction: column;
   align-items: flex-end;
   right: -100%;
-  height: 80%;
+  height: 55%;
   width: 60%;
   background-color: #4f35c6;
   z-index: 1001;
@@ -132,12 +132,11 @@ export default {
 .menu-items ul {
   list-style: none;
   padding: 0;
-  margin: 73px 0;
   text-align: right;
 }
 
 .menu-items li {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .menu-items a {

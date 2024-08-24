@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     goToShop() {
-      this.$router.push({ name: "/ShoppingPage" });
+      this.$router.push({ name: "/ProductGrid" });
     },
   },
 };
@@ -50,7 +50,6 @@ export default {
   <div
     class="d-flex justify-center align-center flex-column text-white h-50 hero_main"
   >
-    <h1 class="header text-center text-48">Best Selling Products</h1>
     <button
       class="text-white text-uppercase font-weight-bold sn_btn px-6 py-4 text-16 rounded-lg my-7"
       @click="goToShop"
@@ -58,9 +57,9 @@ export default {
       Shop now
     </button>
   </div>
-  <div>
-    <h2 class="my-4 mx-6 text-16">Who are we?</h2>
-    <p class="mx-6 my-4 text-12 long_text">
+  <div class="my-14">
+    <h2 class="my-4 mx-6 text-24 font-weight-black ">Who are we?</h2>
+    <p class="mx-6 my-4 text-16 long_text mb-7" >
       Smiley Socks Company was started on the belief that good socks can inspire
       confidence and happiness. We believe that a pair of socks can change you,
       pulling on a great pair of socks has the power to transform not just your
@@ -69,13 +68,13 @@ export default {
       version of themselves. Now that you’ve read about us, how would you feel
       like wearing the coolest socks around?
     </p>
-    <div class="d-flex justify-center align-center my-4">
-      <img :src="lpHero" alt="lp hero" class="hero" />
+    <div class="d-flex justify-center align-center my-4 w-100">
+      <img :src="lpHero" alt="lp hero" class="hero w-90" />
     </div>
   </div>
   <div class="mx-6">
-    <h3 class="text-16 header_h3">Top Product</h3>
-    <div class="grid_container">
+    <h3 class="text-22 header_h3">Best Sellers</h3>
+    <div class="grid_container">    
       <img :src="blueShoe" alt="blueShoe" class="img_content" />
       <img :src="brownShoe" alt="brownShoe" class="img_content" />
       <img :src="blueShoe" alt="blueShoe" class="img_content" />
@@ -85,33 +84,33 @@ export default {
     </div>
   </div>
   <div>
-    <h2 class="mx-6 mt-14 w-66 text-16">What our customer are saying</h2>
+    <h2 class="mx-6 mt-14 w-66 text-22 header_3  ">What our customers <br/> are saying</h2>
     <div class="mx-6 my-4 pa-4 testimonial_card">
       <p class="text-12 long_text">
-        This set of underwear I got from akanbinigeria is so nice and
-        comfortable. I like how they put a touch of perfection in their product.
+        This pair of Nike I got from Feetme is so nice and   
+        comfortable. I like how they put a touch of perfection in packaging.
         Beautiful
       </p>
       <p class="mt-2 text-black text-12">@Temitope</p>
     </div>
-    <div class="d-flex justify-space-evenly footer mt-14 pa-4 text-white">
+    <div class="d-flex justify-space-between footer mt-14 pa-4 text-white">
       <ul class="">
-        <li class="text-14">FAQ</li>
-        <li class="text-14">Contact us</li>
+        <li class="text-16">FAQ</li>
+        <li class="text-16">Contact us</li>
       </ul>
       <ul>
-        <li class="text-14">Shop</li>
-        <li class="text-14">Terms and conditions</li>
+        <li class="text-16">Shop</li>
+        <li class="text-16">Terms and <br/> conditions</li>
       </ul>
       <ul class="footer_icons d-flex justify-space-between">
-        <li><img :src="instagram" alt="instagram" /></li>
-        <li><img :src="twitter" alt="twitter" /></li>
-        <li><img :src="facebook" alt="facebook" /></li>
+        <li><img :src="instagram" alt="instagram" class="footer_img"/></li>
+        <li><img :src="twitter" alt="twitter" class="footer_img"/></li>
+        <li><img :src="facebook" alt="facebook" class="footer_img"/></li>
       </ul>
     </div>
   </div>
 </template>
-<style>
+<style> 
 .hero_main {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(@/assets/shoe.jpg);
@@ -124,14 +123,14 @@ export default {
   border-right: 2px solid yellow;
   border-bottom: 2px solid yellow;
   border-radius: 25px;
-}
+} 
 .sn_btn {
   background: linear-gradient(to right, #6d40ee, #933fed);
 }
 .grid_container {
   display: grid;
   grid-template-columns: auto auto auto;
-}
+} 
 .img_content {
   background-color: #bee4d7;
   width: 90%;
@@ -142,14 +141,19 @@ export default {
 .header_h3 {
   margin-top: 56px;
   margin-bottom: 24px;
+  font-weight: bold;
 }
 .testimonial_card {
   border-right: 3px solid #00d289;
   border-bottom: 3px solid #00d289;
   border-radius: 25px;
+  background-color: #fcfcfc;
 }
-.p {
+.p{
   color: #525151;
+}
+.long_text{
+  color: #4b5563;
 }
 footer ul {
   width: 30%;
@@ -162,9 +166,14 @@ li {
   padding: 4px;
 }
 .footer_icons {
-  width: 30%;
+    width: 30%;
 }
-.footer {
+.footer_img{
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+.footer { 
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   background-color: #4f35c6;

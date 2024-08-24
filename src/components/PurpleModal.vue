@@ -40,16 +40,27 @@ export default {
       required: false,
       default: false,
     },
-     linkPage: {
+    linkPage: {
       type: String,
       required: true,
-      
+    },
+     needed: {
+      type: Boolean,
+       required: true,
+       default: false,
     },
   },
+  methods: {
+     goToShop() {
+      this.$router.push("/ProductGrid" );
+    },
+   
 
+  },
   data() {
     return {};
   },
+
 };
 </script>
 <template>
@@ -60,12 +71,12 @@ export default {
       <h1 class="text-20 w-66 font-weight-medium mt-8">
         How do you want your order delivered?
       </h1>
-      <p class="text-subtitle my-4 text-14">Select a shipping method</p>
+      <p class="text-subtitle my-4 text-16">Select a shipping method</p>
       <div class="d-flex align-baseline my-4">
         <input type="radio" name="delivery" id="" class="mx-3" />
         <div class="mb-7">
           <p class="font-weight-bold text-16">Home delivery</p>
-          <p class="text-14">
+          <p class="text-16">
             Delivered between Wednesday 23 Jun and Friday 25 Jun for ₦ 2,400
           </p>
         </div>
@@ -74,7 +85,7 @@ export default {
         <input type="radio" name="delivery" id="" class="mx-3" />
         <div>
           <p class="font-weight-bold text-16">Pickup</p>
-          <p class="text-14">
+          <p class="text-16">
             Ready for pickup between Wednesday 23 Jun to Friday 25 Jun with
             cheaper shipping fees
           </p>
@@ -88,11 +99,11 @@ export default {
         </button>
       </div>
     </div>
- 
+
     <div v-if="cart">
       <div class="first-div">
         <div class="d-flex pb-4 justify-space-between my-4">
-          <p class="font-weight-regular text-14">Subtotal (2 items)</p>
+          <p class="font-weight-regular text-16">Subtotal (2 items)</p>
           <p class="text-subtitle font-weight-bold text-16">N11,000</p>
         </div>
         <div v-if="shipping" class="d-flex pb-4 justify-space-between my-4">
@@ -119,10 +130,10 @@ export default {
         </button>
       </div>
     </div>
-       <div v-if="confirmation">
+    <div v-if="confirmation">
       <div class="first-div">
         <div class="d-flex pb-4 justify-space-between my-4">
-          <p class="font-weight-regular text-14">Subtotal (2 items)</p>
+          <p class="font-weight-regular text-16">Subtotal (2 items)</p>
           <p class="text-subtitle font-weight-bold text-16">N11,000</p>
         </div>
         <div v-if="shipping" class="d-flex pb-4 justify-space-between my-4">
@@ -135,17 +146,13 @@ export default {
         <p class="text-subtitle font-weight-bold">N 13,000</p>
       </div>
       <div class="d-flex flex-column my-3" v-if="shopping">
-        <button class="pa-3 text-16 rounded-lg mt-5">
-          <a style="color: white; text-decoration: none" href="/CustomerInfo">
-            Continue Shopping</a
-          >
+        <button class="pa-3 text-16 rounded-lg mt-5" @click="goToShop()">
+            Continue Shopping
         </button>
       </div>
-      <div class="d-flex flex-column my-4" >
-        <button class="checkout pa-3 rounded-lg my-4 mt-1 text-16">
-          <a style="text-decoration: none" href="{{ linkPage }}">
+      <div class="d-flex flex-column my-4" v-if="needed">
+        <button class="checkout pa-3 rounded-lg my-4 mt-1 text-16" @click="goToCheckout()">
             Proceed to checkout
-          </a>
         </button>
       </div>
     </div>

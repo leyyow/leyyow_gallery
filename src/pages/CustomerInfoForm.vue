@@ -65,6 +65,7 @@ export default {
         return;
       }
       this.errorMessage = false;
+        this.$router.push("/OrderDetails");
     },
   },
 };
@@ -91,7 +92,9 @@ export default {
           />
         </div>
         <div v-if="errorMessage">
-          <span v-if="!name" class="text-red text-16">This field is required</span>
+          <span v-if="!name" class="text-red text-16"
+            >This field is required</span
+          >
         </div>
 
         <label class="text-grey-darken-2 mt-4 text-16" for="">Email</label>
@@ -151,7 +154,7 @@ export default {
             <div
               class="d-flex align-center py-5 px-5 width my-4 rounded-lg input_div"
             >
-              <img :src="location" alt="location_pointer"  />
+              <img :src="location" alt="location_pointer" />
               <input type="text" class="mx-2" />
             </div>
           </div>
@@ -162,14 +165,23 @@ export default {
   <div class="second">
     <PurpleModal
       :cart="true"
-      :checkout="false"
       :shipping="true"
       :total="true"
+      :checkout="false"
       :shopping="false"
       :confirmation="false"
-      :linkPage="ConfirmationOrder"
+    
     >
-      <button>Go to next page</button>
+      <template #custom-button>
+          <div class="d-flex flex-column my-4" >
+        <button
+          class=" pa-3 rounded-lg my-4 mt-1 text-16 button-color"
+          @click="handleSubmit"
+        >
+          Proceed to Checkout
+        </button>
+      </div>
+      </template>
     </PurpleModal>
   </div>
 </template>
@@ -193,7 +205,7 @@ input {
   border: 1px solid #eaeaea;
   transition: border-color 0.3s ease;
 }
-.input_div img{
+.input_div img {
   width: 35px;
   height: 25px;
 }

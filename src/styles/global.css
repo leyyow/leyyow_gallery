@@ -9,6 +9,7 @@
 }
 .text-16 {
   font-size: 16px !important;
+  font-weight: 400;
 }
 .text-18 {
   font-size: 18px !important;
@@ -48,4 +49,8 @@
 }
 .w-90 {
   width: 90%;
+}
+.button-color{
+  background: white;
+  color: #814cef;
 }

@@ -6,10 +6,8 @@ export default {
 <template>
   <v-container class="pa-0">
     <div class="pa-4">
-      <h1 class="text-24 w-75 mt-6 font-weight-bold">
-      Have a coupon?
-      </h1>
-      <p class="my-4 text-16">
+      <h1 class="text-24 w-75 mt-6 font-weight-bold">Have a coupon?</h1>
+      <p class="my-4 mx-0 text-16">
         Input your coupon code to get Get 20% OFF Limited time offer
       </p>
       <div>
@@ -21,10 +19,10 @@ export default {
     </div>
     <div class="position-absolute bottom-0">
       <PurpleModal
-        :cart="false"
         :checkout="true"
+        :neededBtn="true"
+        :cart="false"
         :confirmation="false"
-        :linkPage="CustomerInfo"
       />
     </div>
   </v-container>

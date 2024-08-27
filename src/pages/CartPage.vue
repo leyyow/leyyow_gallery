@@ -14,7 +14,7 @@ export default {
 </script>
 <template>
   <v-container class="pa-5 ma-0">
-    <h2 class="text-16">Cart (2 items)</h2>
+    <h2 class="text-24">Cart (2 items)</h2>
    <div class=" position-relative v-card my-4 mb-7">
  <img :src="cancel" alt="cancel" class="position-absolute right-0 cancel">
      <div class="d-flex justify-space-between pa-4  rounded-xl ">
@@ -65,7 +65,7 @@ export default {
       :cart="true"
       :checkout="false"
       :confirmation="false"
-      :linkPage="CheckoutPage"
+      :deliveryBtn="true"
       :shopping="true"
     />
   </div>

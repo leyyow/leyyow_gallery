@@ -44,23 +44,32 @@ export default {
       type: String,
       required: true,
     },
-     needed: {
+    neededBtn: {
       type: Boolean,
-       required: true,
-       default: false,
+      required: true,
+      default: false,
+    },
+    deliveryBtn: {
+      type: Boolean,
+      required: true,
+      default: false,
     },
   },
   methods: {
-     goToShop() {
-      this.$router.push("/ProductGrid" );
+    goToShop() {
+      this.$router.push("/ProductGrid");
     },
-   
-
+    goToDelivery() {
+      this.$router.push("/DeliveryMethod");
+    },
+    goToCustomerForm() {
+      this.$router.push("/CustomerInfoForm");
+    },
+    
   },
   data() {
     return {};
   },
-
 };
 </script>
 <template>
@@ -68,14 +77,14 @@ export default {
     class="v-content rounded-t-xl text-white position-relative bottom-0 w-100 ma-0 mt-5 pa-4 overflow-y-scroll"
   >
     <div v-if="checkout">
-      <h1 class="text-20 w-66 font-weight-medium mt-8">
+      <h1 class="text-20 w-66 font-weight-bold mt-8">
         How do you want your order delivered?
       </h1>
       <p class="text-subtitle my-4 text-16">Select a shipping method</p>
       <div class="d-flex align-baseline my-4">
         <input type="radio" name="delivery" id="" class="mx-3" />
         <div class="mb-7">
-          <p class="font-weight-bold text-16">Home delivery</p>
+          <p class="font-weight-medium text-16">Home delivery</p>
           <p class="text-16">
             Delivered between Wednesday 23 Jun and Friday 25 Jun for ₦ 2,400
           </p>
@@ -84,18 +93,19 @@ export default {
       <div class="d-flex align-baseline mb-7">
         <input type="radio" name="delivery" id="" class="mx-3" />
         <div>
-          <p class="font-weight-bold text-16">Pickup</p>
+          <p class="font-weight-medium text-16">Pickup</p>
           <p class="text-16">
             Ready for pickup between Wednesday 23 Jun to Friday 25 Jun with
             cheaper shipping fees
           </p>
         </div>
       </div>
-      <div class="d-flex flex-column my-4">
-        <button class="checkout pa-3 rounded-lg my-4 mt-1 text-16">
-          <a style="text-decoration: none" href="{{ linkPage }}">
-            Proceed to checkout
-          </a>
+      <div class="d-flex flex-column my-4" v-if="neededBtn">
+        <button
+          class="checkout py-3 rounded-lg my-4 mt-1 text-16"
+          @click="goToCustomerForm()"
+        >
+          Next
         </button>
       </div>
     </div>
@@ -116,19 +126,19 @@ export default {
         <p class="text-subtitle font-weight-bold">N 13,000</p>
       </div>
       <div class="d-flex flex-column my-3" v-if="shopping">
-        <button class="pa-3 text-16 rounded-lg mt-5">
-          <a style="color: white; text-decoration: none" href="/CartPage">
-            Continue Shopping</a
-          >
+        <button class="pa-3 text-16 rounded-lg mt-5" @click="goToShop()">
+          Continue Shopping
         </button>
       </div>
-      <div class="d-flex flex-column my-4">
-        <button class="checkout pa-3 rounded-lg my-4 mt-1 text-16">
-          <a style="text-decoration: none" href="{{ linkPage }}">
-            Proceed to checkout
-          </a>
+      <div class="d-flex flex-column my-4" v-if="deliveryBtn">
+        <button
+          class="checkout pa-3 rounded-lg my-4 mt-1 text-16"
+          @click="goToDelivery()"
+        >
+          Choose a delivery method
         </button>
       </div>
+       <slot name="custom-button"></slot>
     </div>
     <div v-if="confirmation">
       <div class="first-div">
@@ -147,14 +157,18 @@ export default {
       </div>
       <div class="d-flex flex-column my-3" v-if="shopping">
         <button class="pa-3 text-16 rounded-lg mt-5" @click="goToShop()">
-            Continue Shopping
+          Continue Shopping
         </button>
       </div>
-      <div class="d-flex flex-column my-4" v-if="needed">
-        <button class="checkout pa-3 rounded-lg my-4 mt-1 text-16" @click="goToCheckout()">
-            Proceed to checkout
+      <div class="d-flex flex-column my-4" v-if="neededBtn">
+        <button
+          class="checkout pa-3 rounded-lg my-4 mt-1 text-16"
+          @click="goToCheckout()"
+        >
+          Proceed to checkout
         </button>
       </div>
+     
     </div>
   </div>
 </template>

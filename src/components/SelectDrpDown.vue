@@ -43,15 +43,15 @@ export default {
 };
 </script>
 <template>
-  <div class="custom-select w-100">
-    <div class="select-box rounded " @click="toggleDropdown">
+  <div class="custom-select w-100 text-14">
+    <div class="select-box rounded-lg py-5 px-4 d-flex justify-space-between my-4 mr-3 " @click="toggleDropdown">
       <span class="selected">{{
         selectedOption ? selectedOption : placeholder
       }}</span>
      <img :src="isOpen ? arrowUp : arrowDown" class="arrow" alt="Arrow Icon" />
     </div>
   <v-fade-transition>
-      <ul v-if="isOpen" class="options position-absolute w-100 rounded bg-white pa-0 ma-0">
+      <ul v-if="isOpen" class="options position-absolute w-50 rounded bg-white pa-0 ma-0 overflow-scroll  ">
       <li
         v-for="option in options"
         :key="option.value"
@@ -67,19 +67,13 @@ export default {
 
 <style scoped>
 .custom-select {
-  position: relative;
   width: 200px;
 }
 
 .select-box {
-  border: 1px solid #EAEAEA;
+  border: 1px solid lightgray;
   color: #9CA3AF;
-  padding: 10px;
   cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
 }
 
 .arrow {
@@ -88,13 +82,14 @@ export default {
 
 .options {
   list-style-type: none;
-  
-  border: 1px solid #EAEAEA;
-  max-height: 200px;
+  /* border: 1px solid #EAEAEA; */
+  /* max-height: 200px; */
+  height: 20%;
 
 }
 ul{
   z-index: 20;
+  border: 1px solid lightgray;
 }
 
 .options li {

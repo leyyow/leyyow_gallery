@@ -92,7 +92,7 @@ export default {
   <div class="hidden" :class="{ 'visible ': activeCard !== null }">
     <div class="header ma-2">
       <div
-        class="d-flex flex-0-0 rounded-lg pa-2 mb-0 w-25 justify-space-between"
+        class="d-flex flex-0-0 rounded-lg pa-2 my-2 mx-4 w-25 justify-space-between"
       >
         <img :src="shop" alt="" class="shop icon" @click="goToGrid()" />
         <div class="position-relative d-flex w-30">

@@ -37,6 +37,44 @@ export default {
           price: "5000",
         },
       ],
+      size: [
+        {
+          text: 'small',
+          value: 'small'
+        },
+        {
+          text: 'medium',
+          value: 'medium'
+        },
+        {
+          text: 'large',
+          value: 'large'
+        },
+        {
+          text: 'extra large',
+          value: 'extra large'
+        }
+      ],
+      selectedSize: null,
+      colors: [
+        {
+          text: 'blue',
+          value: 'blue'
+        },
+        {
+          text: 'brown',
+          value: 'brown'
+        },
+        {
+          text: 'white',
+          value: 'white'
+        },
+        {
+          text: 'black',
+          value: 'black'
+        }
+      ],
+      selectedColor: null,
       activeCard: null,
       isSingleColumn: false,
     };
@@ -157,9 +195,9 @@ export default {
             <div class="w-50 my-4">
               <h4 class="text-20">Sizes</h4>
               <SelectOption
-                v-model="selectedItem"
+                v-model="selectedSize"
                 placeholder="Select Size"
-                :options="sizes"
+                :options="size"
               />
             </div>
           </div>

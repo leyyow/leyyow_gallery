@@ -1,6 +1,10 @@
 <script>
 import SelectOption from "@/components/SelectDrpDown.vue";
 import cart from "@/assets/cart.svg";
+import whiteShoe from "@/assets/newShoe.png";
+import brownShoe from "@/assets/brownShoe.svg";
+import blueShoe from "@/assets/blueShoe.svg";
+import blackShoe from "@/assets/blackShoe.svg";
 export default {
   props: {
     image: {
@@ -11,6 +15,7 @@ export default {
       type: String,
       required: true,
     },
+  
   },
   components: {
     SelectOption,
@@ -19,27 +24,34 @@ export default {
     return {
       cart,
       selectedItem: null,
+      whiteShoe,
+      brownShoe,
+      blueShoe,
+      blackShoe,
       sizes: [
-        { text: "Small", value: 'Small' },
-        { text: "Medium", value: 'Medium' },
-        { text: "Large", value: 'Large' },
-        { text: "XLarge", value: 'XLarge' },
+        { text: "Small", value: "Small" },
+        { text: "Medium", value: "Medium" },
+        { text: "Large", value: "Large" },
+        { text: "XLarge", value: "XLarge" },
       ],
       selectedColor: null,
       colors: [
-        { text: "Red", value: 'Red' },
-        { text: "Blue", value: 'Blue' },
-        { text: "Yellow", value: 'Yellow' },
-        { text: "Black", value: 'Black' },
+        { text: "Red", value: "Red" },
+        { text: "Blue", value: "Blue" },
+        { text: "Yellow", value: "Yellow" },
+        { text: "Black", value: "Black" },
       ],
+    
     };
   },
 };
 </script>
 <template>
   <div class="container">
-    <div class="hero_img d-flex justify-center align-center">
-      <img :src="image" alt="product " class="product_img" />
+    <div
+      class="hero_img d-flex justify-center align-center"
+     
+    >
     </div>
     <div class="header_container">
       <h2 style="width: 50%" class="text-24">{{ name }}</h2>
@@ -72,7 +84,12 @@ export default {
         <i class=""> </i>
         <p class="text-18">Add to cart</p>
         <div class="position-relative">
-          <p class="position-absolute text-10 top-0 right-0 cart_counter translate-middle badge  bg-white"> 1 </p>
+          
+          <p
+            class="position-absolute text-10 top-0 right-0 cart_counter translate-middle badge bg-white"
+          >
+            1
+          </p>
           <img :src="cart" alt="cart icon" class="cart_img" />
         </div>
       </button>
@@ -140,7 +157,6 @@ h2 {
 h4 {
   margin: 10px 0;
 }
-
 
 .btn {
   background: linear-gradient(to right, #5f40ee, #943fed);

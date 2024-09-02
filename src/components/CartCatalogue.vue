@@ -1,223 +1,317 @@
 <template>
   <v-app>
     <div class="products">
-      <div class="card position-relative">
+      <div class="card-container position-relative">
         <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
-          <img class="img" :src="brownShoe" alt="A nike shoe" />
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
+          <img class="img" :src="whiteShoe" alt="A nike shoe" />
         </div>
       </div>
-      <div class="card position-relative">
+      <div class="card-container position-relative">
         <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
           <img class="img" :src="blueShoe" alt="A nike shoe" />
         </div>
       </div>
 
-      <div class="card position-relative">
+      <div class="card-container position-relative">
         <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
+          <img class="img" :src="whiteShoe" alt="A nike shoe" />
+        </div>
+      </div>
+      <div class="card-container position-relative">
+        <div class="img-card d-flex align-center flex-column-reverse">
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
+          <img class="img" :src="whiteShoe" alt="A nike shoe" />
+        </div>
+      </div>
+      <div class="card-container position-relative">
+        <div class="img-card d-flex align-center flex-column-reverse">
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
+          <img class="img" :src="whiteShoe" alt="A nike shoe" />
+        </div>
+      </div>
+      <div class="card-container position-relative">
+        <div class="img-card d-flex align-center flex-column-reverse">
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
           <img class="img" :src="brownShoe" alt="A nike shoe" />
         </div>
       </div>
-      <div class="card position-relative">
+      <div class="card-container position-relative">
         <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
-          <img class="img" :src="whiteShoe" alt="A nike shoe" />
-        </div>
-        
-      </div>
-       <div class="card position-relative">
-        <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
           <img class="img" :src="blueShoe" alt="A nike shoe" />
         </div>
-        
       </div>
-       <div class="card position-relative">
+      <div class="card-container position-relative">
         <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
+          <img class="img" :src="whiteShoe" alt="A nike shoe" />
+        </div>
+      </div>
+      <div class="card-container position-relative">
+        <div class="img-card d-flex align-center flex-column-reverse">
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
+          <img class="img" :src="blueShoe" alt="A nike shoe" />
+        </div>
+      </div>
+      <div class="card-container position-relative">
+        <div class="img-card d-flex align-center flex-column-reverse">
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
           <img class="img" :src="brownShoe" alt="A nike shoe" />
         </div>
-        
       </div>
-       <div class="card position-relative">
+      <div class="card-container position-relative">
         <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
-          <img class="img" :src="blueShoe" alt="A nike shoe" />
-        </div>
-        
-      </div>
-       <div class="card position-relative">
-        <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
           <img class="img" :src="whiteShoe" alt="A nike shoe" />
         </div>
-        
       </div>
-       <div class="card position-relative">
+      <div class="card-container position-relative">
         <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
           <img class="img" :src="blueShoe" alt="A nike shoe" />
         </div>
-        
       </div>
-       <div class="card position-relative">
+      <div class="card-container position-relative">
         <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
           <img class="img" :src="brownShoe" alt="A nike shoe" />
         </div>
-        
       </div>
-       <div class="card position-relative">
+      <div class="card-container position-relative">
         <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
           <img class="img" :src="whiteShoe" alt="A nike shoe" />
         </div>
-        
       </div>
-       <div class="card position-relative">
+      <div class="card-container position-relative">
         <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
-          <img class="img" :src="blueShoe" alt="A nike shoe" />
-        </div>
-        
-      </div>
-       <div class="card position-relative">
-        <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
           <img class="img" :src="brownShoe" alt="A nike shoe" />
         </div>
-        
       </div>
-       <div class="card position-relative">
+      <div class="card-container position-relative">
         <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
+          <img class="img" :src="blueShoe" alt="A nike shoe" />
+        </div>
+      </div>
+      <div class="card-container position-relative">
+        <div class="img-card d-flex align-center flex-column-reverse">
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
           <img class="img" :src="whiteShoe" alt="A nike shoe" />
         </div>
-        
       </div>
-       <div class="card position-relative">
+      <div class="card-container position-relative">
         <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
+          <img class="img" :src="blueShoe" alt="A nike shoe" />
+        </div>
+      </div>
+      <div class="card-container position-relative">
+        <div class="img-card d-flex align-center flex-column-reverse">
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
           <img class="img" :src="brownShoe" alt="A nike shoe" />
         </div>
-        
       </div>
-       <div class="card position-relative">
+      <div class="card-container position-relative">
         <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
-          <img class="img" :src="blueShoe" alt="A nike shoe" />
-        </div>
-        
-      </div>
-       <div class="card position-relative">
-        <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
           <img class="img" :src="whiteShoe" alt="A nike shoe" />
         </div>
-        
       </div>
-       <div class="card position-relative">
+      <div class="card-container position-relative">
         <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
           <img class="img" :src="blueShoe" alt="A nike shoe" />
         </div>
-        
       </div>
-       <div class="card position-relative">
+      <div class="card-container position-relative">
         <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
+          <img class="img" :src="whiteShoe" alt="A nike shoe" />
+        </div>
+      </div>
+      <div class="card-container position-relative">
+        <div class="img-card d-flex align-center flex-column-reverse">
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
           <img class="img" :src="brownShoe" alt="A nike shoe" />
         </div>
-        
       </div>
-       <div class="card position-relative">
+      <div class="card-container position-relative">
         <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
-          <img class="img" :src="whiteShoe" alt="A nike shoe" />
-        </div>
-        
-      </div>
-       <div class="card position-relative">
-        <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
           <img class="img" :src="blueShoe" alt="A nike shoe" />
         </div>
-        
       </div>
-       <div class="card position-relative">
+      <div class="card-container position-relative">
         <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
           <img class="img" :src="whiteShoe" alt="A nike shoe" />
         </div>
-        
       </div>
-       <div class="card position-relative">
+      <div class="card-container position-relative">
         <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
           <img class="img" :src="brownShoe" alt="A nike shoe" />
         </div>
-        
       </div>
-       <div class="card position-relative">
+      <div class="card-container position-relative">
         <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
           <img class="img" :src="blueShoe" alt="A nike shoe" />
         </div>
-        
       </div>
-       <div class="card position-relative">
+      <div class="card-container position-relative">
         <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
           <img class="img" :src="whiteShoe" alt="A nike shoe" />
         </div>
-        
       </div>
-       <div class="card position-relative">
+      <div class="card-container position-relative">
         <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
+          <img class="img" :src="blueShoe" alt="A nike shoe" />
+        </div>
+      </div>
+      <div class="card-container position-relative">
+        <div class="img-card d-flex align-center flex-column-reverse">
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
           <img class="img" :src="brownShoe" alt="A nike shoe" />
         </div>
-        
       </div>
-       <div class="card position-relative">
+      <div class="card-container position-relative">
         <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
-          <img class="img" :src="blueShoe" alt="A nike shoe" />
-        </div>
-        
-      </div>
-       <div class="card position-relative">
-        <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
+          <p
+            class="position-absolute bg-white text-black text-center pa-3 my-2"
+          >
+            N6000
+          </p>
           <img class="img" :src="whiteShoe" alt="A nike shoe" />
         </div>
-        
       </div>
-       <div class="card position-relative">
-        <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
-          <img class="img" :src="blueShoe" alt="A nike shoe" />
-        </div>
-        
-      </div>
-       <div class="card position-relative">
-        <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
-          <img class="img" :src="brownShoe" alt="A nike shoe" />
-        </div>
-        
-      </div>
-       <div class="card position-relative">
-        <div class="img-card d-flex align-center flex-column-reverse">
-          <p class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2">N6000</p>
-          <img class="img" :src="whiteShoe" alt="A nike shoe" />
-        </div>
-        
-      </div>
-      
-     
     </div>
   </v-app>
 </template>
@@ -239,21 +333,22 @@ import blueShoe from "@/assets/blueShoe.svg";
   width: 200px;
   height: 200px;
 }
-.card {
-  background: #f2e9fa;
+
+.card-container {
   border-radius: 4px;
-  margin: 3px;
   display: grid;
 }
 .car-img {
-  background: #f2e9fa;
   border-radius: 4px;
-  margin: 3px;
   width: 100px;
   display: grid;
+
 }
 .products {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
+}
+.img-card{
+ background: #f2e9fa;
 }
 </style>

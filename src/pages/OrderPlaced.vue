@@ -6,6 +6,11 @@ export default {
       yellowBox,
     };
   },
+  methods: {
+    goToPage() {
+     this.$router.push("/")
+ }
+  }
 };
 </script>
 <template>
@@ -26,13 +31,11 @@ export default {
       73772782762738
     </p>
     <button
-      @click="goToPage('/')"
+      @click="goToPage()"
       style="background: linear-gradient(to right, #5f40ee, #943fed)"
       class="text-16 rounded-lg text-white py-4 w-100 font-weight-medium"
     >
-      <a style="color: white; text-decoration: none" href="/CartPage"
-        >Return to home</a
-      >
+     Return Home
     </button>
   </v-container>
 </template>

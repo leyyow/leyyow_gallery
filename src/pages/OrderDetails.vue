@@ -21,6 +21,12 @@ export default {
       darkerProfileIcon,
     };
   },
+  methods: {
+       handleSubmit() {
+      this.$router.push("/OrderPlaced");
+    },
+  },
+  
 };
 </script>
 <template>
@@ -92,7 +98,7 @@ export default {
             class="pa-3 rounded-lg my-4 mt-1 text-16 button-color"
             @click="handleSubmit"
           >
-            Proceed to Checkout
+            Order Successfully Placed
           </button>
         </div>
       </template>

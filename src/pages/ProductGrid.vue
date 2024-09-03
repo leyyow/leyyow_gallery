@@ -165,7 +165,7 @@ export default {
           />
         </div>
         <p
-          class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2"
+          class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2 top-200"
           :class="{ hidden: activeCard !== null }"
         >
           {{ Product.price }}
@@ -293,11 +293,18 @@ li:hover {
 .card {
   border-radius: 4px;
   margin: 3px;
-  display: grid;
+  display: flex;
+  width:100%;
+  height: 300px;
 }
 .img-card {
   border-radius: 8px;
   margin: 3px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  align-items: center;
 }
 .img_card{
   background: #f2e9fa;
@@ -367,5 +374,8 @@ h4 {
 .hero-img-active {
   width: 350px;
   height: 270px;
+}
+.top-200{
+  top: 200px;
 }
 </style>

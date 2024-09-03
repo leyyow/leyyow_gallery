@@ -16,7 +16,7 @@
             :key="item.name"
             class="text-24 font-weight-medium"
           >
-            <a :href="item.link">{{ item.name }}</a>
+            <a href="#"   @click="navigateTo(item.route)">{{ item.name }}</a>
           </li>
         </ul>
         <div class="text-right text-16 text-white">
@@ -25,7 +25,7 @@
         </div>
       </nav>
       <div class="social-icons mb-10">
-        <a v-for="icon in socialIcons" :key="icon.platform" :href="icon.link">
+        <a v-for="icon in socialIcons" :key="icon.platform" :href="icon.route">
           <i :class="icon.iconClass"></i>
         </a>
       </div>
@@ -37,31 +37,22 @@
 import menu from "@/assets/menu.svg";
 import cancelWhite from "@/assets/cancelWhite.svg";
 export default {
-  // props: {
-  //   menuItems: {
-  //     type: Array,
-  //     required: true,
-  //   },
-  //   socialIcons: {
-  //     type: Array,
-  //     required: true,
-  //   },
-  // },
+
   data() {
     return {
       menu,
       cancelWhite,
       menuOpen: false,
       menuItems: [
-        { name: "Home", link: "#" },
-        { name: "About us", link: "#" },
-        { name: "Testimonial", link: "#" },
-        { name: "Shop", link: "#" },
+        { name: "Home", route: "/" },
+        { name: "Gallery", route:'/ProductGrid' },
+        { name: "Cart", route: "/CartPage" },
+        
       ],
       socialIcons: [
-        { platform: "Instagram", link: "#", iconClass: "fab fa-instagram" },
-        { platform: "Twitter", link: "#", iconClass: "fab fa-twitter" },
-        { platform: "Facebook", link: "#", iconClass: "fab fa-facebook-f" },
+        { platform: "Instagram", route: "#", iconClass: "fab fa-instagram" },
+        { platform: "Twitter", route: "#", iconClass: "fab fa-twitter" },
+        { platform: "Facebook", route: "#", iconClass: "fab fa-facebook-f" },
       ],
     };
   },
@@ -72,6 +63,16 @@ export default {
     goToHome() {
       this.$router.push({ name: "/" });
     },
+
+  goToShop() {
+    this.$router.push({ name: "/ProductGrid" });
+  },
+       goToCart() {
+      this.$router.push({ name: "/CartPage" });
+    },
+      navigateTo(route) {
+    this.$router.push(route);
+  },
   },
 };
 </script>

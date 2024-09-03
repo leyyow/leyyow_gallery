@@ -151,6 +151,7 @@ export default {
       :key="index"
       @click="handleCardClick(index)"
       :ref="'Product' + index"
+      :class="{'height100': activeCard !== null}"
     >
       <div
         class="img-card d-flex align-center flex-column-reverse"
@@ -377,5 +378,8 @@ h4 {
 }
 .top-200{
   top: 200px;
+}
+.height100{
+  height: auto;
 }
 </style>

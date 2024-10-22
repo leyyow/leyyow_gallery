@@ -330,8 +330,8 @@ import blueShoe from "@/assets/blueShoe.svg";
   margin: 3px;
 }
 .img {
-  width: 200px;
-  height: 200px;
+  /* width: 200px;
+  height: 200px; */
 }
 
 .card-container {

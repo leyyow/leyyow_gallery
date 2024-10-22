@@ -44,17 +44,18 @@ export default {
 };
 </script>
 <template>
-  <div class="d-flex my-4 mx-6 justify-space-between">
+  <div class="d-flex my-1 mx-2 justify-space-between">
     <MenuBar :menuItems="menuItems" :socialIcons="socialIcons" />
   </div>
   <div
-    class="d-flex justify-center align-center flex-column text-white h-50 hero_main"
+    class="d-flex justify-center align-center flex-column text-white hero_main"
+    style="height: 100vh"
   >
     <button
       class="text-white text-uppercase font-weight-bold sn_btn px-6 py-4 text-16 rounded-lg my-7"
       @click="goToShop"
     >
-      Shop now
+      Enter shop
     </button>
   </div>
   <div class="my-14">
@@ -72,7 +73,7 @@ export default {
       <img :src="lpHero" alt="lp hero" class="hero w-90" />
     </div>
   </div>
-  <div class="mx-6">
+  <div class="mx-6 hide">
     <h3 class="text-22 header_h3">Best Sellers</h3>
     <div class="grid_container">    
       <img :src="blueShoe" alt="blueShoe" class="img_content" />
@@ -83,7 +84,7 @@ export default {
       <img :src="brownShoe" alt="brownShoe" class="img_content" />
     </div>
   </div>
-  <div>
+  <div class="hide">
     <h2 class="mx-6 mt-14 w-66 text-22 header_3  ">What our customers <br/> are saying</h2>
     <div class="mx-6 my-4 pa-4 testimonial_card">
       <p class="text-12 long_text">

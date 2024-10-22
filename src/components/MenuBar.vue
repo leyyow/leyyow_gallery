@@ -1,9 +1,11 @@
 <template>
-  <div class="d-flex justify-space-between header pt-3 mb-6 w-100">
+  <div class="d-flex justify-space-between w-100"
+    style="position: fixed; top: 0; left: 0; z-index: 200; background: #FFF;">
     <h1 @click="goToHome">Logo</h1>
     <button @click="toggleMenu" class="menu-button">
       <img :src="menu" alt="menu icon" />
     </button>
+
     <div v-if="menuOpen" class="menu-overlay" @click="toggleMenu"></div>
     <div :class="['menu', { open: menuOpen }]">
       <button class="close-button" @click="toggleMenu">
@@ -80,12 +82,11 @@ export default {
 <style scoped>
 .menu-button {
   position: relative;
-
   display: flex;
   justify-content: flex-end;
   align-items: center;
   right: 48px;
-  padding-right: 24px;
+  padding-right: 30px;
   left: 20px;
   font-size: 24px;
   z-index: 1000;

@@ -17,5 +17,8 @@ import "@/styles/global.css";
 #app {
   background-color: #E5E5E5;
   font-family: 'Graphik', Helvetica, Arial, sans-serif;}
+.hide {
+  display: none;
+}
 </style>
 

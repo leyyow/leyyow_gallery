@@ -18,18 +18,21 @@ export default {
       cart,
       shop,
       Products: [
-        { img: blueShoe, price: 6000 },
-        { img: brownShoe, price: 6000 },
-        { img: whiteShoe, price: 6000 },
-        { img: blueShoe, price: 6000 },
-        { img: brownShoe, price: 6000 },
-        { img: whiteShoe, price: 6000 },
-        { img: blueShoe, price: 6000 },
-        { img: brownShoe, price: 6000 },
-        { img: whiteShoe, price: 6000 },
-        { img: blueShoe, price: 6000 },
-        { img: brownShoe, price: 6000 },
-        { img: whiteShoe, price: 6000 },
+        { img: blueShoe, price: '3,600,000' },
+        { img: whiteShoe, price: '8,600,000' },
+        { img: whiteShoe, price: '9,600,000' },
+        { img: blueShoe, price: '600,000' },
+        { img: brownShoe, price: '600,000' },
+        { img: brownShoe, price: '600,000' },
+        { img: blueShoe, price: '600,000' },
+        { img: blueShoe, price: '600,000' },
+        { img: brownShoe, price: '600,000' },
+        { img: whiteShoe, price: '600,000' },
+        { img: blueShoe, price: '600,000' },
+        { img: brownShoe, price: '600,000' },
+        { img: whiteShoe, price: '600,000' },
+        { img: blueShoe, price: '600,000' },
+        // { img: brownShoe, price: '600,000' },
       ],
       ProductDetails: [
         {
@@ -100,10 +103,11 @@ export default {
 };
 </script>
 <template>
+  <!-- search and filter in gallery -->
   <div :class="{ hidden: activeCard !== null }">
     <div class="header_container">
       <MenuBar />
-      <div class="d-flex justify-space-between align-center">
+      <!-- <div class="d-flex justify-space-between align-center">
         <div
           class="searchBar d-flex align-center justify-space-between w-80 px-4"
         >
@@ -117,16 +121,18 @@ export default {
           />
         </div>
         <button class="filter w-15"><img :src="filter" alt="filter" /></button>
-      </div>
+      </div> -->
     </div>
-    <ul class="px-4">
+    <!-- <ul class="px-4">
       <li>All</li>
       <li>Unisex</li>
       <li>Tempered</li>
       <li>Journey</li>
       <li>Black Checkers</li>
-    </ul>
+    </ul> -->
   </div>
+  <div style="height: 50px;"><!-- menu spacer --></div>
+  <!-- Menu at top of page in gallery -->
   <div class="hidden" :class="{ 'visible ': activeCard !== null }">
     <div class="header ma-2">
       <div
@@ -144,6 +150,7 @@ export default {
       </div>
     </div>
   </div>
+  <!-- Gallery -->
   <div class="productContainer" :class="{ 'single-column': isSingleColumn }">
     <div
       class="card position-relative"
@@ -154,10 +161,10 @@ export default {
       :class="{'height100': activeCard !== null}"
     >
       <div
-        class="img-card d-flex align-center flex-column-reverse"
+        class="img-card d-flex align-center flex-column"
         :class="{ 'flex-col': activeCard !== null }"
       >
-        <div class="img_card w-90">
+        <div class="img_card w-100">
           <img
             class="img"
             :src="Product.img"
@@ -166,11 +173,12 @@ export default {
           />
         </div>
         <p
-          class="position-absolute w-75 rounded-lg bg-white text-black text-center pa-3 my-2 top-200"
+          class="rounded-lg bg-white text-black text-center pa-1 my-2 bottom"
           :class="{ hidden: activeCard !== null }"
         >
-          {{ Product.price }}
+          &#8358;{{ Product.price }}
         </p>
+        <!-- Gallery expanded -->
         <div
           class="card-details bg-white mt-2"
           :class="{ visible: activeCard !== null }"
@@ -180,21 +188,22 @@ export default {
             v-for="(Details, index) in ProductDetails"
             :key="index"
           >
-            <h2 style="width: 70%" class="text-24 my-4">{{ Details.name }}</h2>
-            <p class="price text-22 fwb">N{{ Details.price }}</p>
+            <h2 style="width: 70%" class="text-20">{{ Details.name }}</h2>
+            <p class="price text-20 fwb">&#8358;{{ Details.price }}</p>
           </div>
 
           <div class="select_container d-flex justify-space-between">
-            <div class="w-50 my-4">
-              <h4 class="text-20">Colors</h4>
+            <div class="w-50">
+              <h4 class="text-18">Color</h4>
               <SelectOption
                 v-model="selectedColor"
                 placeholder="Select Color"
                 :options="colors"
               />
             </div>
-            <div class="w-50 my-4">
-              <h4 class="text-20">Sizes</h4>
+            <div style="width: 15px;"><!--spacer--></div>
+            <div class="w-50">
+              <h4 class="text-18">Size</h4>
               <SelectOption
                 v-model="selectedSize"
                 placeholder="Select Size"
@@ -205,7 +214,7 @@ export default {
           <div class="second_container">
             <button
               size="x-large"
-              class="btn py-4 px-4 rounded-lg d-flex justify-space-between"
+              class="btn py-2 px-4 rounded-lg d-flex justify-space-between"
             >
               <i class=""> </i>
               <p class="text-18">Add to cart</p>
@@ -266,7 +275,7 @@ input::placeholder {
 .header_container {
   display: flex;
   flex-direction: column;
-  margin: 20px 24px;
+  margin: 4px 8px;
 }
 ul {
   display: flex;
@@ -288,19 +297,15 @@ li:hover {
 }
 
 .img {
-  width: 170px;
-  height: 200px;
+  width: 100%;
 }
 .card {
   border-radius: 4px;
-  margin: 3px;
   display: flex;
-  width:100%;
-  height: 300px;
+  height: 150px;
 }
 .img-card {
   border-radius: 8px;
-  margin: 3px;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -308,12 +313,13 @@ li:hover {
   align-items: center;
 }
 .img_card{
-  background: #f2e9fa;
+  /* background: #f2e9fa; */
 }
 .productContainer {
   display: grid;
-  grid-template-columns: auto auto;
-  width: 100%;
+  grid-template-columns: auto auto auto;
+  column-gap: 3px;
+  row-gap: 3px;
 }
 
 .single-column {
@@ -332,12 +338,9 @@ li:hover {
 .visible {
   display: block;
   background: white;
+  padding: 20px;
 }
 .flex-col {
-  display: flex;
-  margin: 0 16px;
-  padding: 0 !important;
-  flex-direction: column !important;
 }
 .second_container {
   width: 100%;
@@ -358,7 +361,8 @@ li:hover {
   margin: 16px 0;
 }
 h4 {
-  margin: 10px 0;
+  font-weight: 100;
+  margin: 10px 0 0;
 }
 
 .btn {
@@ -373,13 +377,17 @@ h4 {
   color: orange;
 }
 .hero-img-active {
-  width: 350px;
-  height: 270px;
+  width: 100%;
+  max-width: 400px;
 }
 .top-200{
   top: 200px;
 }
 .height100{
   height: auto;
+}
+.bottom {
+  position: absolute;
+  bottom: 0;
 }
 </style>

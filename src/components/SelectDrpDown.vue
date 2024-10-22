@@ -44,7 +44,7 @@ export default {
 </script>
 <template>
   <div class="custom-select w-100 text-14">
-    <div class="select-box rounded-lg py-5 px-4 d-flex justify-space-between my-4 mr-3 " @click="toggleDropdown">
+    <div class="select-box rounded-lg py-3 px-2 d-flex justify-space-between" @click="toggleDropdown">
       <span class="selected">{{
         selectedOption ? selectedOption : placeholder
       }}</span>

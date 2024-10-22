@@ -5,6 +5,7 @@ import shop from "@/assets/shop.svg";
 import filter from "@/assets/filterICon.svg";
 import searchIcon from "@/assets/searchIconGray.svg";
 import MenuBar from "@/components/MenuBar.vue";
+import NavBar from "@/components/NavBar.vue";
 import whiteShoe from "@/assets/newShoe.png";
 import brownShoe from "@/assets/brownShoe.svg";
 import blueShoe from "@/assets/blueShoe.svg";
@@ -98,15 +99,17 @@ export default {
   },
   components: {
     MenuBar,
+    NavBar,
     SelectOption,
   },
 };
 </script>
 <template>
+  <MenuBar />
+  <NavBar />
   <!-- search and filter in gallery -->
   <div :class="{ hidden: activeCard !== null }">
     <div class="header_container">
-      <MenuBar />
       <!-- <div class="d-flex justify-space-between align-center">
         <div
           class="searchBar d-flex align-center justify-space-between w-80 px-4"
@@ -134,7 +137,7 @@ export default {
   <div style="height: 50px;"><!-- menu spacer --></div>
   <!-- Menu at top of page in gallery -->
   <div class="hidden" :class="{ 'visible ': activeCard !== null }">
-    <div class="header ma-2">
+    <div class="header">
       <div
         class="d-flex flex-0-0 rounded-lg pa-2 my-2 mx-4 w-25 justify-space-between"
       >
@@ -233,6 +236,7 @@ export default {
       </div>
     </div>
   </div>
+  <div style="height: 42px;"><!-- menu spacer --></div>
 </template>
 
 <style scoped>
@@ -305,11 +309,12 @@ li:hover {
   height: 150px;
 }
 .img-card {
-  border-radius: 8px;
+  /* border-radius: 8px; */
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  /* max-width: 150px; */
+  /* height: 100%; */
   align-items: center;
 }
 .img_card{

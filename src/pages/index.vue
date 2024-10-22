@@ -8,6 +8,8 @@ import brownShoe from "@/assets/brownShoe.svg";
 import blueShoe from "@/assets/blueShoe.svg";
 import MenuBar from "@/components/MenuBar.vue";
 
+import { fetchProducts } from "@/services/apiServices"
+
 export default {
   components: {
     MenuBar,
@@ -41,6 +43,11 @@ export default {
       this.$router.push({ name: "/ProductGrid" });
     },
   },
+  mounted() {
+    fetchProducts('handm').then(res => {
+      console.log(res)
+    })
+  }
 };
 </script>
 <template>
